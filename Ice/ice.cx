@@ -1,0 +1,43 @@
+#package ::Ice
+
+// Convenience types for DDS entity pointers (like intptr in C#)
+uint Participant: width_word
+uint Topic: width_word
+uint Subscriber: width_word
+uint Reader: width_word
+
+// Image type
+struct Image::
+    content_type: string
+    image: sequence{octet, 65530}
+
+// Device connectivity kinds
+enum ConnectionState:: Connected, Negotiating, Disconnected
+
+// Synchronize DDS instances with Cortex
+class DdsConnector::
+    domainId: int32 // DDS domain ID
+    partition: string // DDS partition
+    deviceCache: object // Scope where to store the devices (default = root)
+
+    // Private variables for storing DDS entities
+    dp: Ice::Participant, private|local
+    sub: Ice::Subscriber, private|local
+    topic_deviceIdentity: Ice::Topic, private|local
+    dr_deviceIdentity: Ice::Reader, private|local
+    dr_deviceConnectivity: Ice::Reader, private|local
+
+    // Constructor & destructor
+    int16 construct()
+    void destruct()
+
+// Device class
+class Device::
+    connected: ConnectionState
+    manufacturer: string
+    model: string
+    serial_number: string
+    icon: Image
+    build: string
+    operating_system: string
+
