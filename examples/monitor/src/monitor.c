@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
     deviceCache = cx_declare(NULL, "devices", cx_void_o);
     ddsx = Ice_DdsConnector__create(0, "ICE", deviceCache);
 
-    /* -- Create two observers that listen for updates and deletes in the 'device' scope */
+    /* -- Create two observers that listen for updates and deletes in the 'devices' scope */
     onUpdate = cx_observer__create(deviceCache, CX_ON_DEFINE|CX_ON_UPDATE|CX_ON_SCOPE, NULL, 0, NULL, NULL);
     CX_OBSERVER_SET_CALLBACK(onUpdate, on_update);
     onDelete = cx_observer__create(deviceCache, CX_ON_DELETE|CX_ON_SCOPE, NULL, 0, NULL, NULL);
