@@ -21,5 +21,15 @@ Ice::DdsConnector ddsx: 0, "ICE"
 ```
 This will start both the webserver and ICE DDS connector. To use the webconsole, open a browser and go to the following URL: `http://localhost:8000` (assuming the webserver is on the same host). To test the REST API, use the following convention in the URL: `http://localhost:8000/_/<object name>/<nested object>`. The `_` lets the webserver know that it should not serve the web console.
 
+The REST API can be instructed to show the value, metadata and scope contents of an object. For example, to get the metadata of a device called foo, one would type:
+```
+http://localhost:8000/_/Foo?meta=true
+```
+To see what's in the scope of Foo, type:
+```
+http://localhost:8000/_/Foo?scope=true
+```
+By default, the server will serve as if `value=true` was provided. These flags can be mixed to avoid sending multiple requests.
+
 Note that the webserver can theoretically serve any website. It looks for its files in $(CORTEX_HOME)/interfaces/web. Modify these files to change the contents that the webserver serves. Future versions will allow for a custom path to the file resources.
 
