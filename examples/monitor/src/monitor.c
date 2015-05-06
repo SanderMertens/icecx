@@ -2,7 +2,7 @@
 
 CX_OBSERVER_DEF(on_update)(cx_object _this, cx_object observable, cx_object source) {
     CX_UNUSED(_this); CX_UNUSED(source);
-    printf("[ update ] device %s %s\n", cx_nameof(device), cx_toString(device, 0));
+    printf("[ update ] device %s %s\n", cx_nameof(observable), cx_toString(observable, 0));
 }
 
 CX_OBSERVER_DEF(on_delete)(cx_object _this, cx_object observable, cx_object source) {
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 
     /* -- Create DDS connector for domain 0 and partition ICE, store devices in scope 'deviceCache' */
     deviceCache = cx_declare(NULL, "devices", cx_void_o);
-    ddsx = Ice_DdsConnector__create(ddsx, 0, "ICE", deviceCache);
+    ddsx = Ice_DdsConnector__create(0, "ICE", deviceCache);
 
     /* -- Create two observers that listen for updates and deletes in the deviceCache scope */
     onUpdate = cx_observer__create(deviceCache, CX_ON_DEFINE|CX_ON_UPDATE|CX_ON_SCOPE, NULL, 0, NULL, NULL);
@@ -39,7 +39,8 @@ int main(int argc, char *argv[]) {
     cx_waitfor(exitEvent);
     cx_wait(-1, 0); /* Wait an infinite amount of time */
 
-    /* -- Tear down the cortex object store */
+    /* -- Tear down the cortex object store and cleanup anonymous objects */
+    cx_free(ddsx); cx_free(exitEvent);
     cx_stop();
 
     return 0;
