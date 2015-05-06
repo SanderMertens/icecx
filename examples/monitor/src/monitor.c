@@ -1,7 +1,6 @@
 #include "Ice.h"
 
 CX_OBSERVER_DEF(on_update)(cx_object _this, cx_object observable, cx_object source) {
-    Ice_Device device = observable;
     CX_UNUSED(_this); CX_UNUSED(source);
     printf("[ update ] device %s %s\n", cx_nameof(device), cx_toString(device, 0));
 }
