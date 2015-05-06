@@ -9,7 +9,7 @@ After cortex is setup, just run make in the root of this repository. This will b
 ## Usage
 To run the C example, simply type `icemon`. It will display events whenever data is published in DDS.
 
-To run the cortex scripting example, go to the `examples/cxmonitor` directory and type `cortex monitor`. This will start the equivalent cortex example.
+To run the cortex scripting example, go to the `examples/cxmonitor` directory and type `cortex monitor`. This will start the equivalent cortex scripting example.
 
 ## Run with web
 This code can be easily enhanced with web functionality. To set this up, download and build the web package (cortexlang/web).
