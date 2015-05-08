@@ -1,7 +1,7 @@
 #ifndef ICE_TYPESDCPS_H
 #define ICE_TYPESDCPS_H
 
-#include <dds_dcps.h>
+#include <dds_primitive_types.h>
 
 
 typedef DDS_string ice_UniqueDeviceIdentifier;
@@ -19,25 +19,57 @@ typedef DDS_long ice_InstanceIdentifier;
 typedef DDS_string ice_UnitIdentifier;
  ice_UnitIdentifier *ice_UnitIdentifier__alloc (DDS_unsigned_long len);
 
-typedef DDS_string ice_LongString;
- ice_LongString *ice_LongString__alloc (DDS_unsigned_long len);
+#ifndef _ice_utf32char_defined
+#define _ice_utf32char_defined
+#ifdef __cplusplus
+struct ice_utf32char;
+#else /* __cplusplus */
+typedef struct ice_utf32char ice_utf32char;
+#endif /* __cplusplus */
+#endif /* _ice_utf32char_defined */
+ ice_utf32char *ice_utf32char__alloc (void);
 
-/* Definition for sequence of ice_LongString */
-#ifndef _DDS_sequence_DDS_string_defined
-#define _DDS_sequence_DDS_string_defined
+struct ice_utf32char {
+    DDS_octet value[4];
+};
+
+/* Definition for sequence of ice_utf32char */
+#ifndef _DDS_sequence_ice_utf32char_defined
+#define _DDS_sequence_ice_utf32char_defined
+#ifndef _ice_utf32char_defined
+#define _ice_utf32char_defined
+typedef struct ice_utf32char ice_utf32char;
+#endif /* _ice_utf32char_defined */
 typedef struct {
     DDS_unsigned_long _maximum;
     DDS_unsigned_long _length;
-    DDS_string *_buffer;
+    ice_utf32char *_buffer;
     DDS_boolean _release;
-} DDS_sequence_DDS_string;
- DDS_sequence_DDS_string *DDS_sequence_DDS_string__alloc (void);
- DDS_string *DDS_sequence_DDS_string_allocbuf (DDS_unsigned_long len);
-#endif /* _DDS_sequence_DDS_string_defined */
+} DDS_sequence_ice_utf32char;
+ DDS_sequence_ice_utf32char *DDS_sequence_ice_utf32char__alloc (void);
+ ice_utf32char *DDS_sequence_ice_utf32char_allocbuf (DDS_unsigned_long len);
+#endif /* _DDS_sequence_ice_utf32char_defined */
 
-typedef DDS_sequence_DDS_string ice_ValidTargets;
- ice_ValidTargets *ice_ValidTargets__alloc (void);
- DDS_string *ice_ValidTargets_allocbuf (DDS_unsigned_long len);
+typedef DDS_sequence_ice_utf32char ice_LongString;
+ ice_LongString *ice_LongString__alloc (void);
+ ice_utf32char *ice_LongString_allocbuf (DDS_unsigned_long len);
+
+typedef DDS_sequence_ice_utf32char ice_VeryLongString;
+ ice_VeryLongString *ice_VeryLongString__alloc (void);
+ ice_utf32char *ice_VeryLongString_allocbuf (DDS_unsigned_long len);
+
+/* Definition for sequence of DDS_octet */
+#ifndef _DDS_sequence_octet_defined
+#define _DDS_sequence_octet_defined
+typedef struct {
+    DDS_unsigned_long _maximum;
+    DDS_unsigned_long _length;
+    DDS_octet *_buffer;
+    DDS_boolean _release;
+} DDS_sequence_octet;
+ DDS_sequence_octet *DDS_sequence_octet__alloc (void);
+ DDS_octet *DDS_sequence_octet_allocbuf (DDS_unsigned_long len);
+#endif /* _DDS_sequence_octet_defined */
 
 typedef DDS_sequence_octet ice_ImageData;
  ice_ImageData *ice_ImageData__alloc (void);
@@ -179,7 +211,6 @@ struct ice_DeviceConnectivity {
     ice_ConnectionState state;
     ice_ConnectionType type;
     ice_LongString info;
-    ice_ValidTargets valid_targets;
 };
 
 #define ice_DeviceConnectivityTopic    "DeviceConnectivity"
@@ -346,7 +377,7 @@ typedef struct ice_InfusionStatus ice_InfusionStatus;
 struct ice_InfusionStatus {
     ice_UniqueDeviceIdentifier unique_device_identifier;
     DDS_boolean infusionActive;
-    DDS_string drug_name;
+    ice_LongString drug_name;
     DDS_long drug_mass_mcg;
     DDS_long solution_volume_ml;
     DDS_long volume_to_be_infused_ml;
@@ -477,8 +508,8 @@ typedef struct ice_Patient ice_Patient;
 
 struct ice_Patient {
     DDS_string mrn;
-    DDS_string given_name;
-    DDS_string family_name;
+    ice_VeryLongString given_name;
+    ice_VeryLongString family_name;
 };
 
 #define ice_PatientTopic               "Patient"

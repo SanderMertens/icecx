@@ -14,6 +14,17 @@
 #include "dds_dcps.h"
 #include "CheckStatus.h"
 
+/* Temporary adjustment for UTF-32 assumes no characters
+ * outside ISO-8859-1 */ 
+char * utf32Hack(ice_LongString *longString) {
+    static char buffer[1024];
+    for(unsigned int i = 0; i < longString->_length; i++) {
+        buffer[i] = longString->_buffer[i].value[0];
+    }
+    buffer[longString->_length] = '\0';
+    return (char*) buffer;
+ }
+
 /* -- Copy DDS data from DDS to cortex */
 void Ice_DdsConnector_update(Ice_DdsConnector _this, Ice_Device dest, ice_DeviceIdentity *src) {
     CX_UNUSED(_this);
@@ -27,18 +38,18 @@ void Ice_DdsConnector_update(Ice_DdsConnector _this, Ice_Device dest, ice_Device
     }
 
     if (dest->manufacturer) cx_dealloc(dest->manufacturer);
-    dest->manufacturer = cx_strdup(src->manufacturer);
+    dest->manufacturer = cx_strdup(utf32Hack(&src->manufacturer));
 
     if (dest->model) cx_dealloc(dest->model);
-    dest->model = cx_strdup(src->model);
+    dest->model = cx_strdup(utf32Hack(&src->model));
 
     if (dest->serial_number) cx_dealloc(dest->serial_number);
-    dest->serial_number = cx_strdup(src->serial_number);
+    dest->serial_number = cx_strdup(utf32Hack(&src->serial_number));
 
     if (dest->icon.content_type) cx_dealloc(dest->icon.content_type);
     dest->icon.content_type = cx_strdup(src->icon.content_type);
     dest->icon.image.length = src->icon.image._length;
-    memcpy(dest->icon.image.buffer, src->icon.image._buffer, dest->icon.image.length);   
+   // memcpy(dest->icon.image.buffer, src->icon.image._buffer, dest->icon.image.length);   
 
     if (dest->build) cx_dealloc(dest->build);
     dest->build = cx_strdup(src->build);
@@ -68,7 +79,8 @@ typedef enum Ice_CrudKind {
 Ice_CrudKind Ice_DdsToCrudKind(DDS_ViewStateKind vs, DDS_InstanceStateKind is) {
     Ice_CrudKind result;
 
-    if(is == DDS_NOT_ALIVE_DISPOSED_INSTANCE_STATE) {
+    if(is == DDS_NOT_ALIVE_DISPOSED_INSTANCE_STATE || 
+       is == DDS_NOT_ALIVE_NO_WRITERS_INSTANCE_STATE) {
         result = Ice_Delete;
     }else if(vs == DDS_NEW_VIEW_STATE) {
         result = Ice_Create;
@@ -182,11 +194,14 @@ cx_int16 Ice_DdsConnector_construct(Ice_DdsConnector _this) {
     status = DDS_DomainParticipant_get_default_topic_qos(dp, &topicQos);
     checkStatus(status, "DDS_DomainParticipant_get_default_topic_qos");
     topicQos.reliability.kind = DDS_RELIABLE_RELIABILITY_QOS;
-    topicQos.durability.kind = DDS_TRANSIENT_DURABILITY_QOS;
+    topicQos.durability.kind = DDS_TRANSIENT_LOCAL_DURABILITY_QOS;
+    topicQos.ownership.kind = DDS_EXCLUSIVE_OWNERSHIP_QOS;
+    topicQos.history.depth = 1;
+    topicQos.history.kind = DDS_KEEP_LAST_HISTORY_QOS;
 
     deviceIdentityTopic = DDS_DomainParticipant_create_topic(
         dp,
-        "ice_DeviceIdentity",
+        "DeviceIdentity",
         deviceIdentityTypeName,
         &topicQos,
         NULL,

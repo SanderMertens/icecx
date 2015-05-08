@@ -6,338 +6,179 @@ extern "C" {
 #include "ice_typesSplDcps.h"
 #include "ice_typesDcps.h"
 
-const char *
-__ice_Time_t__name(void)
-{
-    return (const char*)"ice::Time_t";
-}
-
-const char *
-__ice_Time_t__keys(void)
-{
-    return (const char*)"";
-}
-
-const char *
-__ice_HeartBeat__name(void)
-{
-    return (const char*)"ice::HeartBeat";
-}
-
-const char *
-__ice_HeartBeat__keys(void)
-{
-    return (const char*)"unique_device_identifier";
-}
-
-const char *
-__ice_TimeSync__name(void)
-{
-    return (const char*)"ice::TimeSync";
-}
-
-const char *
-__ice_TimeSync__keys(void)
-{
-    return (const char*)"heartbeat_source,heartbeat_recipient";
-}
-
-const char *
-__ice_Image__name(void)
-{
-    return (const char*)"ice::Image";
-}
-
-const char *
-__ice_Image__keys(void)
-{
-    return (const char*)"";
-}
-
-const char *
-__ice_DeviceIdentity__name(void)
-{
-    return (const char*)"ice::DeviceIdentity";
-}
-
-const char *
-__ice_DeviceIdentity__keys(void)
-{
-    return (const char*)"unique_device_identifier";
-}
-
-const char *
-__ice_DeviceConnectivity__name(void)
-{
-    return (const char*)"ice::DeviceConnectivity";
-}
-
-const char *
-__ice_DeviceConnectivity__keys(void)
-{
-    return (const char*)"unique_device_identifier";
-}
-
-const char *
-__ice_MDSConnectivity__name(void)
-{
-    return (const char*)"ice::MDSConnectivity";
-}
-
-const char *
-__ice_MDSConnectivity__keys(void)
-{
-    return (const char*)"unique_device_identifier";
-}
-
-const char *
-__ice_MDSConnectivityObjective__name(void)
-{
-    return (const char*)"ice::MDSConnectivityObjective";
-}
-
-const char *
-__ice_MDSConnectivityObjective__keys(void)
-{
-    return (const char*)"unique_device_identifier";
-}
-
-const char *
-__ice_Numeric__name(void)
-{
-    return (const char*)"ice::Numeric";
-}
-
-const char *
-__ice_Numeric__keys(void)
-{
-    return (const char*)"unique_device_identifier,metric_id,vendor_metric_id,instance_id,unit_id";
-}
-
-const char *
-__ice_SampleArray__name(void)
-{
-    return (const char*)"ice::SampleArray";
-}
-
-const char *
-__ice_SampleArray__keys(void)
-{
-    return (const char*)"unique_device_identifier,metric_id,instance_id,unit_id,frequency";
-}
-
-const char *
-__ice_InfusionObjective__name(void)
-{
-    return (const char*)"ice::InfusionObjective";
-}
-
-const char *
-__ice_InfusionObjective__keys(void)
-{
-    return (const char*)"unique_device_identifier";
-}
-
-const char *
-__ice_InfusionStatus__name(void)
-{
-    return (const char*)"ice::InfusionStatus";
-}
-
-const char *
-__ice_InfusionStatus__keys(void)
-{
-    return (const char*)"unique_device_identifier";
-}
-
-const char *
-__ice_AlarmLimit__name(void)
-{
-    return (const char*)"ice::AlarmLimit";
-}
-
-const char *
-__ice_AlarmLimit__keys(void)
-{
-    return (const char*)"unique_device_identifier,metric_id,limit_type";
-}
-
-const char *
-__ice_GlobalAlarmLimitObjective__name(void)
-{
-    return (const char*)"ice::GlobalAlarmLimitObjective";
-}
-
-const char *
-__ice_GlobalAlarmLimitObjective__keys(void)
-{
-    return (const char*)"metric_id,limit_type";
-}
-
-const char *
-__ice_LocalAlarmLimitObjective__name(void)
-{
-    return (const char*)"ice::LocalAlarmLimitObjective";
-}
-
-const char *
-__ice_LocalAlarmLimitObjective__keys(void)
-{
-    return (const char*)"unique_device_identifier,metric_id,limit_type";
-}
-
-const char *
-__ice_DeviceAlertCondition__name(void)
-{
-    return (const char*)"ice::DeviceAlertCondition";
-}
-
-const char *
-__ice_DeviceAlertCondition__keys(void)
-{
-    return (const char*)"unique_device_identifier";
-}
-
-const char *
-__ice_Alert__name(void)
-{
-    return (const char*)"ice::Alert";
-}
-
-const char *
-__ice_Alert__keys(void)
-{
-    return (const char*)"unique_device_identifier,identifier";
-}
-
-const char *
-__ice_Patient__name(void)
-{
-    return (const char*)"ice::Patient";
-}
-
-const char *
-__ice_Patient__keys(void)
-{
-    return (const char*)"mrn";
-}
-
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 140 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 141 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 147 */
 #include <v_kernel.h>
 #include <v_topic.h>
 #include <string.h>
 #include <os_report.h>
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2217 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_ValidTargets__copyIn(c_base base, void *_from, void *_to)
+__ice_utf32char__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_ValidTargets *from = (ice_ValidTargets *)_from;
-    _ice_ValidTargets *to = (_ice_ValidTargets *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2089 */
+    const ice_utf32char *from = (const ice_utf32char *)_from;
+    struct _ice_utf32char *to = (struct _ice_utf32char *)_to;
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 631 */
+    {
+        typedef c_octet _DestType[4];
+        _DestType *dst = &to->value;
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1523 */
+        memcpy (dst, from->value, sizeof (*dst));
+    }
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
+    (void) base;
+    return result;
+}
+
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2187 */
+c_bool
+__ice_LongString__copyIn(c_base base, const void *_from, void *_to)
+{
+    c_bool result = TRUE;
+
+    const ice_LongString *from = (const ice_LongString *)_from;
+    _ice_LongString *to = (_ice_LongString *)_to;
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2059 */
     static c_type type0 = NULL;
     c_type subtype0 = NULL;
     c_long length0;
-    _ice_LongString *dst0;
-    ice_ValidTargets *from0 = from;
+    struct _ice_utf32char *dst0;
+    const ice_LongString *from0 = from;
 
     if (type0 == NULL) {
-        subtype0 = c_type(c_metaResolve (c_metaObject(base), "ice::LongString"));
-        type0 = c_metaSequenceTypeNew(c_metaObject(base),"C_SEQUENCE<ice::LongString,128>",subtype0,128);
+        subtype0 = c_type(c_metaResolve (c_metaObject(base), "ice::utf32char"));
+        type0 = c_metaSequenceTypeNew(c_metaObject(base),"C_SEQUENCE<ice::utf32char,128>",subtype0,128);
         c_free(subtype0);
     }
     length0 = (c_long)(*from)._length;
 #ifdef OSPL_BOUNDS_CHECK
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2111 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2081 */
     if(length0 > 128){
-        OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice.ValidTargets' of type 'C_SEQUENCE<LongString,128>' is out of range.");
+        OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice.LongString' of type 'C_SEQUENCE<utf32char,128>' is out of range.");
         result = FALSE;
     } else {
-        dst0 = (_ice_LongString *)c_newSequence(c_collectionType(type0),length0);
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1715 */
+        dst0 = (struct _ice_utf32char *)c_newSequence(c_collectionType(type0),length0);
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1686 */
         if((*from0)._buffer)
         {
             unsigned int i0;
             for (i0 = 0; (i0 < (unsigned int)length0) && result; i0++) {
-        /* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1844 */
-
-#ifdef OSPL_BOUNDS_CHECK
-        if((*from0)._buffer[i0]){
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1849 */
-                    if(((unsigned int)(strlen((*from0)._buffer[i0]))) <= 128){
-                        dst0[i0] = c_stringNew(base, (*from0)._buffer[i0]);
-                    } else {
-                        OS_REPORT (OS_ERROR, "copyIn", 0,"Element of 'ice.ValidTargets' of type 'LongString' is out of range.");
-                        result = FALSE;
-                    }
-                } else {
-                    OS_REPORT (OS_ERROR, "copyIn", 0,"Element of 'ice.ValidTargets' of type 'LongString' is NULL.");
-                    result = FALSE;
-                }
-#else
-                dst0[i0] = c_stringNew(base, (*from0)._buffer[i0]);
-#endif
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1784 */
+                extern c_bool __ice_utf32char__copyIn(c_base base, const void *, void *);
+                result = __ice_utf32char__copyIn(base, &(*from0)._buffer[i0], (struct _ice_utf32char *)&dst0[i0]);
             }
         } else if(length0) {
             /* Report an error! */
-            OS_REPORT (OS_ERROR, "copyIn", 0,"Element of 'ice.ValidTargets' of type 'LongString' is out of range.");
+            OS_REPORT (OS_ERROR, "copyIn", 0,"Element of 'ice.LongString' of type 'utf32char' is out of range.");
             result = FALSE;
         }
-        *to = (_ice_ValidTargets)dst0;
+        *to = (_ice_LongString)dst0;
     }
 #else
-    dst0 = (_ice_LongString *)c_newSequence(c_collectionType(type0),length0);
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1715 */
+    dst0 = (struct _ice_utf32char *)c_newSequence(c_collectionType(type0),length0);
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1686 */
     if((*from0)._buffer)
     {
         unsigned int i0;
         for (i0 = 0; (i0 < (unsigned int)length0) && result; i0++) {
-    /* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1844 */
-
-#ifdef OSPL_BOUNDS_CHECK
-        if((*from0)._buffer[i0]){
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1849 */
-                if(((unsigned int)(strlen((*from0)._buffer[i0]))) <= 128){
-                    dst0[i0] = c_stringNew(base, (*from0)._buffer[i0]);
-                } else {
-                    OS_REPORT (OS_ERROR, "copyIn", 0,"Element of 'ice.ValidTargets' of type 'LongString' is out of range.");
-                    result = FALSE;
-                }
-            } else {
-                OS_REPORT (OS_ERROR, "copyIn", 0,"Element of 'ice.ValidTargets' of type 'LongString' is NULL.");
-                result = FALSE;
-            }
-#else
-            dst0[i0] = c_stringNew(base, (*from0)._buffer[i0]);
-#endif
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1784 */
+            extern c_bool __ice_utf32char__copyIn(c_base base, const void *, void *);
+            result = __ice_utf32char__copyIn(base, &(*from0)._buffer[i0], (struct _ice_utf32char *)&dst0[i0]);
         }
     } else if(length0) {
         /* Report an error! */
-        OS_REPORT (OS_ERROR, "copyIn", 0,"Element of 'ice.ValidTargets' of type 'LongString' is out of range.");
+        OS_REPORT (OS_ERROR, "copyIn", 0,"Element of 'ice.LongString' of type 'utf32char' is out of range.");
         result = FALSE;
     }
-    *to = (_ice_ValidTargets)dst0;
+    *to = (_ice_LongString)dst0;
 #endif
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2217 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2187 */
 c_bool
-__ice_ImageData__copyIn(c_base base, void *_from, void *_to)
+__ice_VeryLongString__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_ImageData *from = (ice_ImageData *)_from;
+    const ice_VeryLongString *from = (const ice_VeryLongString *)_from;
+    _ice_VeryLongString *to = (_ice_VeryLongString *)_to;
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2059 */
+    static c_type type0 = NULL;
+    c_type subtype0 = NULL;
+    c_long length0;
+    struct _ice_utf32char *dst0;
+    const ice_VeryLongString *from0 = from;
+
+    if (type0 == NULL) {
+        subtype0 = c_type(c_metaResolve (c_metaObject(base), "ice::utf32char"));
+        type0 = c_metaSequenceTypeNew(c_metaObject(base),"C_SEQUENCE<ice::utf32char,256>",subtype0,256);
+        c_free(subtype0);
+    }
+    length0 = (c_long)(*from)._length;
+#ifdef OSPL_BOUNDS_CHECK
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2081 */
+    if(length0 > 256){
+        OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice.VeryLongString' of type 'C_SEQUENCE<utf32char,256>' is out of range.");
+        result = FALSE;
+    } else {
+        dst0 = (struct _ice_utf32char *)c_newSequence(c_collectionType(type0),length0);
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1686 */
+        if((*from0)._buffer)
+        {
+            unsigned int i0;
+            for (i0 = 0; (i0 < (unsigned int)length0) && result; i0++) {
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1784 */
+                extern c_bool __ice_utf32char__copyIn(c_base base, const void *, void *);
+                result = __ice_utf32char__copyIn(base, &(*from0)._buffer[i0], (struct _ice_utf32char *)&dst0[i0]);
+            }
+        } else if(length0) {
+            /* Report an error! */
+            OS_REPORT (OS_ERROR, "copyIn", 0,"Element of 'ice.VeryLongString' of type 'utf32char' is out of range.");
+            result = FALSE;
+        }
+        *to = (_ice_VeryLongString)dst0;
+    }
+#else
+    dst0 = (struct _ice_utf32char *)c_newSequence(c_collectionType(type0),length0);
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1686 */
+    if((*from0)._buffer)
+    {
+        unsigned int i0;
+        for (i0 = 0; (i0 < (unsigned int)length0) && result; i0++) {
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1784 */
+            extern c_bool __ice_utf32char__copyIn(c_base base, const void *, void *);
+            result = __ice_utf32char__copyIn(base, &(*from0)._buffer[i0], (struct _ice_utf32char *)&dst0[i0]);
+        }
+    } else if(length0) {
+        /* Report an error! */
+        OS_REPORT (OS_ERROR, "copyIn", 0,"Element of 'ice.VeryLongString' of type 'utf32char' is out of range.");
+        result = FALSE;
+    }
+    *to = (_ice_VeryLongString)dst0;
+#endif
+    (void) base;
+    return result;
+}
+
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2187 */
+c_bool
+__ice_ImageData__copyIn(c_base base, const void *_from, void *_to)
+{
+    c_bool result = TRUE;
+
+    const ice_ImageData *from = (const ice_ImageData *)_from;
     _ice_ImageData *to = (_ice_ImageData *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2089 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2059 */
     static c_type type0 = NULL;
     c_type subtype0 = NULL;
     c_long length0;
     c_octet *dst0;
-    ice_ImageData *from0 = from;
+    const ice_ImageData *from0 = from;
 
     if (type0 == NULL) {
         subtype0 = c_type(c_metaResolve (c_metaObject(base), "c_octet"));
@@ -346,19 +187,19 @@ __ice_ImageData__copyIn(c_base base, void *_from, void *_to)
     }
     length0 = (c_long)(*from)._length;
 #ifdef OSPL_BOUNDS_CHECK
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2111 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2081 */
     if(length0 > 65530){
         OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice.ImageData' of type 'C_SEQUENCE<c_octet,65530>' is out of range.");
         result = FALSE;
     } else {
         dst0 = (c_octet *)c_newSequence(c_collectionType(type0),length0);
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1707 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1678 */
         memcpy (dst0,(*from0)._buffer,length0* sizeof(*dst0));
         *to = (_ice_ImageData)dst0;
     }
 #else
     dst0 = (c_octet *)c_newSequence(c_collectionType(type0),length0);
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1707 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1678 */
     memcpy (dst0,(*from0)._buffer,length0* sizeof(*dst0));
     *to = (_ice_ImageData)dst0;
 #endif
@@ -366,20 +207,20 @@ __ice_ImageData__copyIn(c_base base, void *_from, void *_to)
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2217 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2187 */
 c_bool
-__ice_Values__copyIn(c_base base, void *_from, void *_to)
+__ice_Values__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_Values *from = (ice_Values *)_from;
+    const ice_Values *from = (const ice_Values *)_from;
     _ice_Values *to = (_ice_Values *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2089 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2059 */
     static c_type type0 = NULL;
     c_type subtype0 = NULL;
     c_long length0;
     c_float *dst0;
-    ice_Values *from0 = from;
+    const ice_Values *from0 = from;
 
     if (type0 == NULL) {
         subtype0 = c_type(c_metaResolve (c_metaObject(base), "c_float"));
@@ -388,19 +229,19 @@ __ice_Values__copyIn(c_base base, void *_from, void *_to)
     }
     length0 = (c_long)(*from)._length;
 #ifdef OSPL_BOUNDS_CHECK
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2111 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 2081 */
     if(length0 > 1024){
         OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice.Values' of type 'C_SEQUENCE<c_float,1024>' is out of range.");
         result = FALSE;
     } else {
         dst0 = (c_float *)c_newSequence(c_collectionType(type0),length0);
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1707 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1678 */
         memcpy (dst0,(*from0)._buffer,length0* sizeof(*dst0));
         *to = (_ice_Values)dst0;
     }
 #else
     dst0 = (c_float *)c_newSequence(c_collectionType(type0),length0);
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1707 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 1678 */
     memcpy (dst0,(*from0)._buffer,length0* sizeof(*dst0));
     *to = (_ice_Values)dst0;
 #endif
@@ -408,39 +249,39 @@ __ice_Values__copyIn(c_base base, void *_from, void *_to)
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_Time_t__copyIn(c_base base, void *_from, void *_to)
+__ice_Time_t__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_Time_t *from = (ice_Time_t *)_from;
+    const ice_Time_t *from = (const ice_Time_t *)_from;
     struct _ice_Time_t *to = (struct _ice_Time_t *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->sec = (c_long)from->sec;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->nanosec = (c_long)from->nanosec;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_HeartBeat__copyIn(c_base base, void *_from, void *_to)
+__ice_HeartBeat__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_HeartBeat *from = (ice_HeartBeat *)_from;
+    const ice_HeartBeat *from = (const ice_HeartBeat *)_from;
     struct _ice_HeartBeat *to = (struct _ice_HeartBeat *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -454,11 +295,11 @@ __ice_HeartBeat__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->type) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->type)) <= 32) {
             to->type = c_stringNew(base, from->type);
         } else {
@@ -472,25 +313,25 @@ __ice_HeartBeat__copyIn(c_base base, void *_from, void *_to)
 #else
     to->type = c_stringNew(base, from->type);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_TimeSync__copyIn(c_base base, void *_from, void *_to)
+__ice_TimeSync__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_TimeSync *from = (ice_TimeSync *)_from;
+    const ice_TimeSync *from = (const ice_TimeSync *)_from;
     struct _ice_TimeSync *to = (struct _ice_TimeSync *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->heartbeat_source) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->heartbeat_source)) <= 64) {
             to->heartbeat_source = c_stringNew(base, from->heartbeat_source);
         } else {
@@ -504,12 +345,12 @@ __ice_TimeSync__copyIn(c_base base, void *_from, void *_to)
 #else
     to->heartbeat_source = c_stringNew(base, from->heartbeat_source);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->heartbeat_recipient) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->heartbeat_recipient)) <= 64) {
             to->heartbeat_recipient = c_stringNew(base, from->heartbeat_recipient);
         } else {
@@ -523,34 +364,34 @@ __ice_TimeSync__copyIn(c_base base, void *_from, void *_to)
 #else
     to->heartbeat_recipient = c_stringNew(base, from->heartbeat_recipient);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 581 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 584 */
     if(result){
-        extern c_bool __ice_Time_t__copyIn(c_base, void *, void *);
+        extern c_bool __ice_Time_t__copyIn(c_base, const void *, void *);
         result = __ice_Time_t__copyIn(base, &from->source_source_timestamp, &to->source_source_timestamp);
     }
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 581 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 584 */
     if(result){
-        extern c_bool __ice_Time_t__copyIn(c_base, void *, void *);
+        extern c_bool __ice_Time_t__copyIn(c_base, const void *, void *);
         result = __ice_Time_t__copyIn(base, &from->recipient_receipt_timestamp, &to->recipient_receipt_timestamp);
     }
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_Image__copyIn(c_base base, void *_from, void *_to)
+__ice_Image__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_Image *from = (ice_Image *)_from;
+    const ice_Image *from = (const ice_Image *)_from;
     struct _ice_Image *to = (struct _ice_Image *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->content_type) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->content_type)) <= 64) {
             to->content_type = c_stringNew(base, from->content_type);
         } else {
@@ -564,30 +405,30 @@ __ice_Image__copyIn(c_base base, void *_from, void *_to)
 #else
     to->content_type = c_stringNew(base, from->content_type);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 546 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 549 */
     if(result){
-        extern c_bool __ice_ImageData__copyIn(c_base, void *, void *);
+        extern c_bool __ice_ImageData__copyIn(c_base, const void *, void *);
         result = __ice_ImageData__copyIn(base, &from->image, &to->image);
     }
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_DeviceIdentity__copyIn(c_base base, void *_from, void *_to)
+__ice_DeviceIdentity__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_DeviceIdentity *from = (ice_DeviceIdentity *)_from;
+    const ice_DeviceIdentity *from = (const ice_DeviceIdentity *)_from;
     struct _ice_DeviceIdentity *to = (struct _ice_DeviceIdentity *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -601,73 +442,31 @@ __ice_DeviceIdentity__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
-#ifdef OSPL_BOUNDS_CHECK
-    if (from->manufacturer) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
-        if (((unsigned int)strlen(from->manufacturer)) <= 128) {
-            to->manufacturer = c_stringNew(base, from->manufacturer);
-        } else {
-            OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::DeviceIdentity.manufacturer' of type 'C_STRING<128>' is out of range.");
-            result = FALSE;
-        }
-    } else {
-        OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::DeviceIdentity.manufacturer' of type 'C_STRING<128>' is NULL.");
-        result = FALSE;
-    }
-#else
-    to->manufacturer = c_stringNew(base, from->manufacturer);
-#endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
-#ifdef OSPL_BOUNDS_CHECK
-    if (from->model) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
-        if (((unsigned int)strlen(from->model)) <= 128) {
-            to->model = c_stringNew(base, from->model);
-        } else {
-            OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::DeviceIdentity.model' of type 'C_STRING<128>' is out of range.");
-            result = FALSE;
-        }
-    } else {
-        OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::DeviceIdentity.model' of type 'C_STRING<128>' is NULL.");
-        result = FALSE;
-    }
-#else
-    to->model = c_stringNew(base, from->model);
-#endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
-#ifdef OSPL_BOUNDS_CHECK
-    if (from->serial_number) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
-        if (((unsigned int)strlen(from->serial_number)) <= 128) {
-            to->serial_number = c_stringNew(base, from->serial_number);
-        } else {
-            OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::DeviceIdentity.serial_number' of type 'C_STRING<128>' is out of range.");
-            result = FALSE;
-        }
-    } else {
-        OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::DeviceIdentity.serial_number' of type 'C_STRING<128>' is NULL.");
-        result = FALSE;
-    }
-#else
-    to->serial_number = c_stringNew(base, from->serial_number);
-#endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 581 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 549 */
     if(result){
-        extern c_bool __ice_Image__copyIn(c_base, void *, void *);
+        extern c_bool __ice_LongString__copyIn(c_base, const void *, void *);
+        result = __ice_LongString__copyIn(base, &from->manufacturer, &to->manufacturer);
+    }
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 549 */
+    if(result){
+        extern c_bool __ice_LongString__copyIn(c_base, const void *, void *);
+        result = __ice_LongString__copyIn(base, &from->model, &to->model);
+    }
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 549 */
+    if(result){
+        extern c_bool __ice_LongString__copyIn(c_base, const void *, void *);
+        result = __ice_LongString__copyIn(base, &from->serial_number, &to->serial_number);
+    }
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 584 */
+    if(result){
+        extern c_bool __ice_Image__copyIn(c_base, const void *, void *);
         result = __ice_Image__copyIn(base, &from->icon, &to->icon);
     }
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->build) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->build)) <= 128) {
             to->build = c_stringNew(base, from->build);
         } else {
@@ -681,11 +480,11 @@ __ice_DeviceIdentity__copyIn(c_base base, void *_from, void *_to)
 #else
     to->build = c_stringNew(base, from->build);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->operating_system) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->operating_system)) <= 128) {
             to->operating_system = c_stringNew(base, from->operating_system);
         } else {
@@ -699,25 +498,25 @@ __ice_DeviceIdentity__copyIn(c_base base, void *_from, void *_to)
 #else
     to->operating_system = c_stringNew(base, from->operating_system);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_DeviceConnectivity__copyIn(c_base base, void *_from, void *_to)
+__ice_DeviceConnectivity__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_DeviceConnectivity *from = (ice_DeviceConnectivity *)_from;
+    const ice_DeviceConnectivity *from = (const ice_DeviceConnectivity *)_from;
     struct _ice_DeviceConnectivity *to = (struct _ice_DeviceConnectivity *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -731,7 +530,7 @@ __ice_DeviceConnectivity__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 564 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 567 */
 #ifdef OSPL_BOUNDS_CHECK
     if((((c_long)from->state) >= 0) && (((c_long)from->state) < 5) ){
         to->state = (enum _ice_ConnectionState)from->state;
@@ -742,7 +541,7 @@ __ice_DeviceConnectivity__copyIn(c_base base, void *_from, void *_to)
 #else
     to->state = (enum _ice_ConnectionState)from->state;
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 564 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 567 */
 #ifdef OSPL_BOUNDS_CHECK
     if((((c_long)from->type) >= 0) && (((c_long)from->type) < 3) ){
         to->type = (enum _ice_ConnectionType)from->type;
@@ -753,49 +552,30 @@ __ice_DeviceConnectivity__copyIn(c_base base, void *_from, void *_to)
 #else
     to->type = (enum _ice_ConnectionType)from->type;
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
-#ifdef OSPL_BOUNDS_CHECK
-    if (from->info) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
-        if (((unsigned int)strlen(from->info)) <= 128) {
-            to->info = c_stringNew(base, from->info);
-        } else {
-            OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::DeviceConnectivity.info' of type 'C_STRING<128>' is out of range.");
-            result = FALSE;
-        }
-    } else {
-        OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::DeviceConnectivity.info' of type 'C_STRING<128>' is NULL.");
-        result = FALSE;
-    }
-#else
-    to->info = c_stringNew(base, from->info);
-#endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 546 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 549 */
     if(result){
-        extern c_bool __ice_ValidTargets__copyIn(c_base, void *, void *);
-        result = __ice_ValidTargets__copyIn(base, &from->valid_targets, &to->valid_targets);
+        extern c_bool __ice_LongString__copyIn(c_base, const void *, void *);
+        result = __ice_LongString__copyIn(base, &from->info, &to->info);
     }
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_MDSConnectivity__copyIn(c_base base, void *_from, void *_to)
+__ice_MDSConnectivity__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_MDSConnectivity *from = (ice_MDSConnectivity *)_from;
+    const ice_MDSConnectivity *from = (const ice_MDSConnectivity *)_from;
     struct _ice_MDSConnectivity *to = (struct _ice_MDSConnectivity *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -809,11 +589,11 @@ __ice_MDSConnectivity__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->partition) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->partition)) <= 128) {
             to->partition = c_stringNew(base, from->partition);
         } else {
@@ -827,25 +607,25 @@ __ice_MDSConnectivity__copyIn(c_base base, void *_from, void *_to)
 #else
     to->partition = c_stringNew(base, from->partition);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_MDSConnectivityObjective__copyIn(c_base base, void *_from, void *_to)
+__ice_MDSConnectivityObjective__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_MDSConnectivityObjective *from = (ice_MDSConnectivityObjective *)_from;
+    const ice_MDSConnectivityObjective *from = (const ice_MDSConnectivityObjective *)_from;
     struct _ice_MDSConnectivityObjective *to = (struct _ice_MDSConnectivityObjective *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -859,11 +639,11 @@ __ice_MDSConnectivityObjective__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->partition) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->partition)) <= 128) {
             to->partition = c_stringNew(base, from->partition);
         } else {
@@ -877,25 +657,25 @@ __ice_MDSConnectivityObjective__copyIn(c_base base, void *_from, void *_to)
 #else
     to->partition = c_stringNew(base, from->partition);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_Numeric__copyIn(c_base base, void *_from, void *_to)
+__ice_Numeric__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_Numeric *from = (ice_Numeric *)_from;
+    const ice_Numeric *from = (const ice_Numeric *)_from;
     struct _ice_Numeric *to = (struct _ice_Numeric *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -909,12 +689,12 @@ __ice_Numeric__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->metric_id) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->metric_id)) <= 64) {
             to->metric_id = c_stringNew(base, from->metric_id);
         } else {
@@ -928,12 +708,12 @@ __ice_Numeric__copyIn(c_base base, void *_from, void *_to)
 #else
     to->metric_id = c_stringNew(base, from->metric_id);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->vendor_metric_id) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->vendor_metric_id)) <= 64) {
             to->vendor_metric_id = c_stringNew(base, from->vendor_metric_id);
         } else {
@@ -947,16 +727,16 @@ __ice_Numeric__copyIn(c_base base, void *_from, void *_to)
 #else
     to->vendor_metric_id = c_stringNew(base, from->vendor_metric_id);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->instance_id = (c_long)from->instance_id;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unit_id) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unit_id)) <= 64) {
             to->unit_id = c_stringNew(base, from->unit_id);
         } else {
@@ -970,38 +750,38 @@ __ice_Numeric__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unit_id = c_stringNew(base, from->unit_id);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->value = (c_float)from->value;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 581 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 584 */
     if(result){
-        extern c_bool __ice_Time_t__copyIn(c_base, void *, void *);
+        extern c_bool __ice_Time_t__copyIn(c_base, const void *, void *);
         result = __ice_Time_t__copyIn(base, &from->device_time, &to->device_time);
     }
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 581 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 584 */
     if(result){
-        extern c_bool __ice_Time_t__copyIn(c_base, void *, void *);
+        extern c_bool __ice_Time_t__copyIn(c_base, const void *, void *);
         result = __ice_Time_t__copyIn(base, &from->presentation_time, &to->presentation_time);
     }
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_SampleArray__copyIn(c_base base, void *_from, void *_to)
+__ice_SampleArray__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_SampleArray *from = (ice_SampleArray *)_from;
+    const ice_SampleArray *from = (const ice_SampleArray *)_from;
     struct _ice_SampleArray *to = (struct _ice_SampleArray *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -1015,12 +795,12 @@ __ice_SampleArray__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->metric_id) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->metric_id)) <= 64) {
             to->metric_id = c_stringNew(base, from->metric_id);
         } else {
@@ -1034,12 +814,12 @@ __ice_SampleArray__copyIn(c_base base, void *_from, void *_to)
 #else
     to->metric_id = c_stringNew(base, from->metric_id);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->vendor_metric_id) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->vendor_metric_id)) <= 64) {
             to->vendor_metric_id = c_stringNew(base, from->vendor_metric_id);
         } else {
@@ -1053,16 +833,16 @@ __ice_SampleArray__copyIn(c_base base, void *_from, void *_to)
 #else
     to->vendor_metric_id = c_stringNew(base, from->vendor_metric_id);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->instance_id = (c_long)from->instance_id;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unit_id) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unit_id)) <= 64) {
             to->unit_id = c_stringNew(base, from->unit_id);
         } else {
@@ -1076,43 +856,43 @@ __ice_SampleArray__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unit_id = c_stringNew(base, from->unit_id);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->frequency = (c_long)from->frequency;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 546 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 549 */
     if(result){
-        extern c_bool __ice_Values__copyIn(c_base, void *, void *);
+        extern c_bool __ice_Values__copyIn(c_base, const void *, void *);
         result = __ice_Values__copyIn(base, &from->values, &to->values);
     }
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 581 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 584 */
     if(result){
-        extern c_bool __ice_Time_t__copyIn(c_base, void *, void *);
+        extern c_bool __ice_Time_t__copyIn(c_base, const void *, void *);
         result = __ice_Time_t__copyIn(base, &from->device_time, &to->device_time);
     }
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 581 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 584 */
     if(result){
-        extern c_bool __ice_Time_t__copyIn(c_base, void *, void *);
+        extern c_bool __ice_Time_t__copyIn(c_base, const void *, void *);
         result = __ice_Time_t__copyIn(base, &from->presentation_time, &to->presentation_time);
     }
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_InfusionObjective__copyIn(c_base base, void *_from, void *_to)
+__ice_InfusionObjective__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_InfusionObjective *from = (ice_InfusionObjective *)_from;
+    const ice_InfusionObjective *from = (const ice_InfusionObjective *)_from;
     struct _ice_InfusionObjective *to = (struct _ice_InfusionObjective *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -1126,47 +906,33 @@ __ice_InfusionObjective__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
-#ifdef OSPL_BOUNDS_CHECK
-    if (from->requestor) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
-        if (((unsigned int)strlen(from->requestor)) <= 128) {
-            to->requestor = c_stringNew(base, from->requestor);
-        } else {
-            OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::InfusionObjective.requestor' of type 'C_STRING<128>' is out of range.");
-            result = FALSE;
-        }
-    } else {
-        OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::InfusionObjective.requestor' of type 'C_STRING<128>' is NULL.");
-        result = FALSE;
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 549 */
+    if(result){
+        extern c_bool __ice_LongString__copyIn(c_base, const void *, void *);
+        result = __ice_LongString__copyIn(base, &from->requestor, &to->requestor);
     }
-#else
-    to->requestor = c_stringNew(base, from->requestor);
-#endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->stopInfusion = (c_bool)from->stopInfusion;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_InfusionStatus__copyIn(c_base base, void *_from, void *_to)
+__ice_InfusionStatus__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_InfusionStatus *from = (ice_InfusionStatus *)_from;
+    const ice_InfusionStatus *from = (const ice_InfusionStatus *)_from;
     struct _ice_InfusionStatus *to = (struct _ice_InfusionStatus *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -1180,61 +946,48 @@ __ice_InfusionStatus__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->infusionActive = (c_bool)from->infusionActive;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
-#ifdef OSPL_BOUNDS_CHECK
-    if (from->drug_name) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
-        if (((unsigned int)strlen(from->drug_name)) <= 128) {
-            to->drug_name = c_stringNew(base, from->drug_name);
-        } else {
-            OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::InfusionStatus.drug_name' of type 'C_STRING<128>' is out of range.");
-            result = FALSE;
-        }
-    } else {
-        OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::InfusionStatus.drug_name' of type 'C_STRING<128>' is NULL.");
-        result = FALSE;
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 549 */
+    if(result){
+        extern c_bool __ice_LongString__copyIn(c_base, const void *, void *);
+        result = __ice_LongString__copyIn(base, &from->drug_name, &to->drug_name);
     }
-#else
-    to->drug_name = c_stringNew(base, from->drug_name);
-#endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->drug_mass_mcg = (c_long)from->drug_mass_mcg;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->solution_volume_ml = (c_long)from->solution_volume_ml;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->volume_to_be_infused_ml = (c_long)from->volume_to_be_infused_ml;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->infusion_duration_seconds = (c_long)from->infusion_duration_seconds;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->infusion_fraction_complete = (c_float)from->infusion_fraction_complete;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_AlarmLimit__copyIn(c_base base, void *_from, void *_to)
+__ice_AlarmLimit__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_AlarmLimit *from = (ice_AlarmLimit *)_from;
+    const ice_AlarmLimit *from = (const ice_AlarmLimit *)_from;
     struct _ice_AlarmLimit *to = (struct _ice_AlarmLimit *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -1248,12 +1001,12 @@ __ice_AlarmLimit__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->metric_id) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->metric_id)) <= 64) {
             to->metric_id = c_stringNew(base, from->metric_id);
         } else {
@@ -1267,7 +1020,7 @@ __ice_AlarmLimit__copyIn(c_base base, void *_from, void *_to)
 #else
     to->metric_id = c_stringNew(base, from->metric_id);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 564 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 567 */
 #ifdef OSPL_BOUNDS_CHECK
     if((((c_long)from->limit_type) >= 0) && (((c_long)from->limit_type) < 2) ){
         to->limit_type = (enum _ice_LimitType)from->limit_type;
@@ -1278,12 +1031,12 @@ __ice_AlarmLimit__copyIn(c_base base, void *_from, void *_to)
 #else
     to->limit_type = (enum _ice_LimitType)from->limit_type;
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unit_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unit_identifier)) <= 64) {
             to->unit_identifier = c_stringNew(base, from->unit_identifier);
         } else {
@@ -1297,28 +1050,28 @@ __ice_AlarmLimit__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unit_identifier = c_stringNew(base, from->unit_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->value = (c_float)from->value;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_GlobalAlarmLimitObjective__copyIn(c_base base, void *_from, void *_to)
+__ice_GlobalAlarmLimitObjective__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_GlobalAlarmLimitObjective *from = (ice_GlobalAlarmLimitObjective *)_from;
+    const ice_GlobalAlarmLimitObjective *from = (const ice_GlobalAlarmLimitObjective *)_from;
     struct _ice_GlobalAlarmLimitObjective *to = (struct _ice_GlobalAlarmLimitObjective *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->metric_id) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->metric_id)) <= 64) {
             to->metric_id = c_stringNew(base, from->metric_id);
         } else {
@@ -1332,7 +1085,7 @@ __ice_GlobalAlarmLimitObjective__copyIn(c_base base, void *_from, void *_to)
 #else
     to->metric_id = c_stringNew(base, from->metric_id);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 564 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 567 */
 #ifdef OSPL_BOUNDS_CHECK
     if((((c_long)from->limit_type) >= 0) && (((c_long)from->limit_type) < 2) ){
         to->limit_type = (enum _ice_LimitType)from->limit_type;
@@ -1343,12 +1096,12 @@ __ice_GlobalAlarmLimitObjective__copyIn(c_base base, void *_from, void *_to)
 #else
     to->limit_type = (enum _ice_LimitType)from->limit_type;
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unit_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unit_identifier)) <= 64) {
             to->unit_identifier = c_stringNew(base, from->unit_identifier);
         } else {
@@ -1362,28 +1115,28 @@ __ice_GlobalAlarmLimitObjective__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unit_identifier = c_stringNew(base, from->unit_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->value = (c_float)from->value;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_LocalAlarmLimitObjective__copyIn(c_base base, void *_from, void *_to)
+__ice_LocalAlarmLimitObjective__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_LocalAlarmLimitObjective *from = (ice_LocalAlarmLimitObjective *)_from;
+    const ice_LocalAlarmLimitObjective *from = (const ice_LocalAlarmLimitObjective *)_from;
     struct _ice_LocalAlarmLimitObjective *to = (struct _ice_LocalAlarmLimitObjective *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -1397,12 +1150,12 @@ __ice_LocalAlarmLimitObjective__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->metric_id) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->metric_id)) <= 64) {
             to->metric_id = c_stringNew(base, from->metric_id);
         } else {
@@ -1416,7 +1169,7 @@ __ice_LocalAlarmLimitObjective__copyIn(c_base base, void *_from, void *_to)
 #else
     to->metric_id = c_stringNew(base, from->metric_id);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 564 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 567 */
 #ifdef OSPL_BOUNDS_CHECK
     if((((c_long)from->limit_type) >= 0) && (((c_long)from->limit_type) < 2) ){
         to->limit_type = (enum _ice_LimitType)from->limit_type;
@@ -1427,12 +1180,12 @@ __ice_LocalAlarmLimitObjective__copyIn(c_base base, void *_from, void *_to)
 #else
     to->limit_type = (enum _ice_LimitType)from->limit_type;
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unit_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unit_identifier)) <= 64) {
             to->unit_identifier = c_stringNew(base, from->unit_identifier);
         } else {
@@ -1446,28 +1199,28 @@ __ice_LocalAlarmLimitObjective__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unit_identifier = c_stringNew(base, from->unit_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 308 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 311 */
     to->value = (c_float)from->value;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_DeviceAlertCondition__copyIn(c_base base, void *_from, void *_to)
+__ice_DeviceAlertCondition__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_DeviceAlertCondition *from = (ice_DeviceAlertCondition *)_from;
+    const ice_DeviceAlertCondition *from = (const ice_DeviceAlertCondition *)_from;
     struct _ice_DeviceAlertCondition *to = (struct _ice_DeviceAlertCondition *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -1481,11 +1234,11 @@ __ice_DeviceAlertCondition__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->alert_state) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->alert_state)) <= 256) {
             to->alert_state = c_stringNew(base, from->alert_state);
         } else {
@@ -1499,25 +1252,25 @@ __ice_DeviceAlertCondition__copyIn(c_base base, void *_from, void *_to)
 #else
     to->alert_state = c_stringNew(base, from->alert_state);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_Alert__copyIn(c_base base, void *_from, void *_to)
+__ice_Alert__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_Alert *from = (ice_Alert *)_from;
+    const ice_Alert *from = (const ice_Alert *)_from;
     struct _ice_Alert *to = (struct _ice_Alert *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 554 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 557 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->unique_device_identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->unique_device_identifier)) <= 64) {
             to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
         } else {
@@ -1531,11 +1284,11 @@ __ice_Alert__copyIn(c_base base, void *_from, void *_to)
 #else
     to->unique_device_identifier = c_stringNew(base, from->unique_device_identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->identifier) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->identifier)) <= 256) {
             to->identifier = c_stringNew(base, from->identifier);
         } else {
@@ -1549,11 +1302,11 @@ __ice_Alert__copyIn(c_base base, void *_from, void *_to)
 #else
     to->identifier = c_stringNew(base, from->identifier);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->text) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->text)) <= 256) {
             to->text = c_stringNew(base, from->text);
         } else {
@@ -1567,24 +1320,24 @@ __ice_Alert__copyIn(c_base base, void *_from, void *_to)
 #else
     to->text = c_stringNew(base, from->text);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
 
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 225 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 228 */
 c_bool
-__ice_Patient__copyIn(c_base base, void *_from, void *_to)
+__ice_Patient__copyIn(c_base base, const void *_from, void *_to)
 {
     c_bool result = TRUE;
 
-    ice_Patient *from = (ice_Patient *)_from;
+    const ice_Patient *from = (const ice_Patient *)_from;
     struct _ice_Patient *to = (struct _ice_Patient *)_to;
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 511 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 317 */
 #ifdef OSPL_BOUNDS_CHECK
     if (from->mrn) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 322 */
         if (((unsigned int)strlen(from->mrn)) <= 16) {
             to->mrn = c_stringNew(base, from->mrn);
         } else {
@@ -1598,43 +1351,17 @@ __ice_Patient__copyIn(c_base base, void *_from, void *_to)
 #else
     to->mrn = c_stringNew(base, from->mrn);
 #endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
-#ifdef OSPL_BOUNDS_CHECK
-    if (from->given_name) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
-        if (((unsigned int)strlen(from->given_name)) <= 256) {
-            to->given_name = c_stringNew(base, from->given_name);
-        } else {
-            OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::Patient.given_name' of type 'C_STRING<256>' is out of range.");
-            result = FALSE;
-        }
-    } else {
-        OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::Patient.given_name' of type 'C_STRING<256>' is NULL.");
-        result = FALSE;
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 549 */
+    if(result){
+        extern c_bool __ice_VeryLongString__copyIn(c_base, const void *, void *);
+        result = __ice_VeryLongString__copyIn(base, &from->given_name, &to->given_name);
     }
-#else
-    to->given_name = c_stringNew(base, from->given_name);
-#endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 508 */
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 314 */
-#ifdef OSPL_BOUNDS_CHECK
-    if (from->family_name) {
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 319 */
-        if (((unsigned int)strlen(from->family_name)) <= 256) {
-            to->family_name = c_stringNew(base, from->family_name);
-        } else {
-            OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::Patient.family_name' of type 'C_STRING<256>' is out of range.");
-            result = FALSE;
-        }
-    } else {
-        OS_REPORT (OS_ERROR, "copyIn", 0,"Member 'ice::Patient.family_name' of type 'C_STRING<256>' is NULL.");
-        result = FALSE;
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 549 */
+    if(result){
+        extern c_bool __ice_VeryLongString__copyIn(c_base, const void *, void *);
+        result = __ice_VeryLongString__copyIn(base, &from->family_name, &to->family_name);
     }
-#else
-    to->family_name = c_stringNew(base, from->family_name);
-#endif
-/* Code generated in file: /home/erik/OvernightTests/tmp.EfPeTJ5ocF/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 260 */
+/* Code generated in file: /home/dds/OvernightTests/tmp.kcPqOb8icK/build/src/tools/idlpp/code/idl_genCorbaCCopyin.c at line: 263 */
     (void) base;
     return result;
 }
@@ -1642,113 +1369,157 @@ __ice_Patient__copyIn(c_base base, void *_from, void *_to)
 #include <dds_dcps_private.h>
 
 void
-__ice_ValidTargets__copyOut(void *_from, void *_to)
+__ice_utf32char__copyOut(const void *_from, void *_to)
 {
-    _ice_ValidTargets *from = (_ice_ValidTargets *)_from;
-    ice_ValidTargets *to = (ice_ValidTargets *)_to;
+    const struct _ice_utf32char *from = (const struct _ice_utf32char *)_from;
+    ice_utf32char *to = (ice_utf32char *)_to;
+    {
+        typedef c_octet _DestType[4];
+        const _DestType *src = &from->value;
+
+        memcpy (to->value, src, sizeof (*src));
+    }
+}
+
+void
+__ice_LongString__copyOut(const void *_from, void *_to)
+{
+    const _ice_LongString *from = (const _ice_LongString *)_from;
+    ice_LongString *to = (ice_LongString *)_to;
     long size0;
-    _ice_LongString *src0 = (_ice_LongString *)(*from);
-    ice_ValidTargets *dst0 = to;
+    const struct _ice_utf32char *src0 = (const struct _ice_utf32char *)(*from);
+    ice_LongString *dst0 = to;
 
     size0 = c_arraySize((c_sequence)(src0));
-    DDS_sequence_replacebuf (dst0, (bufferAllocatorType)DDS_sequence_DDS_string_allocbuf, 128);
+    DDS_sequence_replacebuf ((_DDS_sequence)dst0, (bufferAllocatorType)DDS_sequence_ice_utf32char_allocbuf, 128);
     dst0->_length = size0;
     {
         long i0;
         for (i0 = 0; i0 < size0; i0++) {
-            DDS_string_replace (src0[i0] ? src0[i0] : "", &(*dst0)._buffer[i0]);
+            extern void __ice_utf32char__copyOut(const void *, void *);
+            __ice_utf32char__copyOut(&src0[i0], &(*dst0)._buffer[i0]);
         }
     }
 }
 
 void
-__ice_ImageData__copyOut(void *_from, void *_to)
+__ice_VeryLongString__copyOut(const void *_from, void *_to)
 {
-    _ice_ImageData *from = (_ice_ImageData *)_from;
+    const _ice_VeryLongString *from = (const _ice_VeryLongString *)_from;
+    ice_VeryLongString *to = (ice_VeryLongString *)_to;
+    long size0;
+    const struct _ice_utf32char *src0 = (const struct _ice_utf32char *)(*from);
+    ice_VeryLongString *dst0 = to;
+
+    size0 = c_arraySize((c_sequence)(src0));
+    DDS_sequence_replacebuf ((_DDS_sequence)dst0, (bufferAllocatorType)DDS_sequence_ice_utf32char_allocbuf, 256);
+    dst0->_length = size0;
+    {
+        long i0;
+        for (i0 = 0; i0 < size0; i0++) {
+            extern void __ice_utf32char__copyOut(const void *, void *);
+            __ice_utf32char__copyOut(&src0[i0], &(*dst0)._buffer[i0]);
+        }
+    }
+}
+
+void
+__ice_ImageData__copyOut(const void *_from, void *_to)
+{
+    const _ice_ImageData *from = (const _ice_ImageData *)_from;
     ice_ImageData *to = (ice_ImageData *)_to;
     long size0;
-    c_octet *src0 = (c_octet *)(*from);
+    const c_octet *src0 = (const c_octet *)(*from);
     ice_ImageData *dst0 = to;
 
     size0 = c_arraySize((c_sequence)(src0));
-    DDS_sequence_replacebuf (dst0, (bufferAllocatorType)DDS_sequence_octet_allocbuf, 65530);
+    DDS_sequence_replacebuf ((_DDS_sequence)dst0, (bufferAllocatorType)DDS_sequence_octet_allocbuf, 65530);
     dst0->_length = size0;
     memcpy ((*dst0)._buffer,src0,size0* sizeof(*((*dst0)._buffer)));
 }
 
 void
-__ice_Values__copyOut(void *_from, void *_to)
+__ice_Values__copyOut(const void *_from, void *_to)
 {
-    _ice_Values *from = (_ice_Values *)_from;
+    const _ice_Values *from = (const _ice_Values *)_from;
     ice_Values *to = (ice_Values *)_to;
     long size0;
-    c_float *src0 = (c_float *)(*from);
+    const c_float *src0 = (const c_float *)(*from);
     ice_Values *dst0 = to;
 
     size0 = c_arraySize((c_sequence)(src0));
-    DDS_sequence_replacebuf (dst0, (bufferAllocatorType)DDS_sequence_float_allocbuf, 1024);
+    DDS_sequence_replacebuf ((_DDS_sequence)dst0, (bufferAllocatorType)DDS_sequence_float_allocbuf, 1024);
     dst0->_length = size0;
     memcpy ((*dst0)._buffer,src0,size0* sizeof(*((*dst0)._buffer)));
 }
 
 void
-__ice_Time_t__copyOut(void *_from, void *_to)
+__ice_Time_t__copyOut(const void *_from, void *_to)
 {
-    struct _ice_Time_t *from = (struct _ice_Time_t *)_from;
+    const struct _ice_Time_t *from = (const struct _ice_Time_t *)_from;
     ice_Time_t *to = (ice_Time_t *)_to;
     to->sec = (DDS_long)from->sec;
     to->nanosec = (DDS_long)from->nanosec;
 }
 
 void
-__ice_HeartBeat__copyOut(void *_from, void *_to)
+__ice_HeartBeat__copyOut(const void *_from, void *_to)
 {
-    struct _ice_HeartBeat *from = (struct _ice_HeartBeat *)_from;
+    const struct _ice_HeartBeat *from = (const struct _ice_HeartBeat *)_from;
     ice_HeartBeat *to = (ice_HeartBeat *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
     DDS_string_replace (from->type ? from->type : "", &to->type);
 }
 
 void
-__ice_TimeSync__copyOut(void *_from, void *_to)
+__ice_TimeSync__copyOut(const void *_from, void *_to)
 {
-    struct _ice_TimeSync *from = (struct _ice_TimeSync *)_from;
+    const struct _ice_TimeSync *from = (const struct _ice_TimeSync *)_from;
     ice_TimeSync *to = (ice_TimeSync *)_to;
     DDS_string_replace (from->heartbeat_source ? from->heartbeat_source : "", &to->heartbeat_source);
     DDS_string_replace (from->heartbeat_recipient ? from->heartbeat_recipient : "", &to->heartbeat_recipient);
     {
-        extern void __ice_Time_t__copyOut(void *, void *);
+        extern void __ice_Time_t__copyOut(const void *, void *);
         __ice_Time_t__copyOut(&from->source_source_timestamp, &to->source_source_timestamp);
     }
     {
-        extern void __ice_Time_t__copyOut(void *, void *);
+        extern void __ice_Time_t__copyOut(const void *, void *);
         __ice_Time_t__copyOut(&from->recipient_receipt_timestamp, &to->recipient_receipt_timestamp);
     }
 }
 
 void
-__ice_Image__copyOut(void *_from, void *_to)
+__ice_Image__copyOut(const void *_from, void *_to)
 {
-    struct _ice_Image *from = (struct _ice_Image *)_from;
+    const struct _ice_Image *from = (const struct _ice_Image *)_from;
     ice_Image *to = (ice_Image *)_to;
     DDS_string_replace (from->content_type ? from->content_type : "", &to->content_type);
     {
-        extern void __ice_ImageData__copyOut(void *, void *);
+        extern void __ice_ImageData__copyOut(const void *, void *);
         __ice_ImageData__copyOut(&from->image, &to->image);
     }
 }
 
 void
-__ice_DeviceIdentity__copyOut(void *_from, void *_to)
+__ice_DeviceIdentity__copyOut(const void *_from, void *_to)
 {
-    struct _ice_DeviceIdentity *from = (struct _ice_DeviceIdentity *)_from;
+    const struct _ice_DeviceIdentity *from = (const struct _ice_DeviceIdentity *)_from;
     ice_DeviceIdentity *to = (ice_DeviceIdentity *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
-    DDS_string_replace (from->manufacturer ? from->manufacturer : "", &to->manufacturer);
-    DDS_string_replace (from->model ? from->model : "", &to->model);
-    DDS_string_replace (from->serial_number ? from->serial_number : "", &to->serial_number);
     {
-        extern void __ice_Image__copyOut(void *, void *);
+        extern void __ice_LongString__copyOut(const void *, void *);
+        __ice_LongString__copyOut(&from->manufacturer, &to->manufacturer);
+    }
+    {
+        extern void __ice_LongString__copyOut(const void *, void *);
+        __ice_LongString__copyOut(&from->model, &to->model);
+    }
+    {
+        extern void __ice_LongString__copyOut(const void *, void *);
+        __ice_LongString__copyOut(&from->serial_number, &to->serial_number);
+    }
+    {
+        extern void __ice_Image__copyOut(const void *, void *);
         __ice_Image__copyOut(&from->icon, &to->icon);
     }
     DDS_string_replace (from->build ? from->build : "", &to->build);
@@ -1756,42 +1527,41 @@ __ice_DeviceIdentity__copyOut(void *_from, void *_to)
 }
 
 void
-__ice_DeviceConnectivity__copyOut(void *_from, void *_to)
+__ice_DeviceConnectivity__copyOut(const void *_from, void *_to)
 {
-    struct _ice_DeviceConnectivity *from = (struct _ice_DeviceConnectivity *)_from;
+    const struct _ice_DeviceConnectivity *from = (const struct _ice_DeviceConnectivity *)_from;
     ice_DeviceConnectivity *to = (ice_DeviceConnectivity *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
     to->state = (ice_ConnectionState)from->state;
     to->type = (ice_ConnectionType)from->type;
-    DDS_string_replace (from->info ? from->info : "", &to->info);
     {
-        extern void __ice_ValidTargets__copyOut(void *, void *);
-        __ice_ValidTargets__copyOut(&from->valid_targets, &to->valid_targets);
+        extern void __ice_LongString__copyOut(const void *, void *);
+        __ice_LongString__copyOut(&from->info, &to->info);
     }
 }
 
 void
-__ice_MDSConnectivity__copyOut(void *_from, void *_to)
+__ice_MDSConnectivity__copyOut(const void *_from, void *_to)
 {
-    struct _ice_MDSConnectivity *from = (struct _ice_MDSConnectivity *)_from;
+    const struct _ice_MDSConnectivity *from = (const struct _ice_MDSConnectivity *)_from;
     ice_MDSConnectivity *to = (ice_MDSConnectivity *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
     DDS_string_replace (from->partition ? from->partition : "", &to->partition);
 }
 
 void
-__ice_MDSConnectivityObjective__copyOut(void *_from, void *_to)
+__ice_MDSConnectivityObjective__copyOut(const void *_from, void *_to)
 {
-    struct _ice_MDSConnectivityObjective *from = (struct _ice_MDSConnectivityObjective *)_from;
+    const struct _ice_MDSConnectivityObjective *from = (const struct _ice_MDSConnectivityObjective *)_from;
     ice_MDSConnectivityObjective *to = (ice_MDSConnectivityObjective *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
     DDS_string_replace (from->partition ? from->partition : "", &to->partition);
 }
 
 void
-__ice_Numeric__copyOut(void *_from, void *_to)
+__ice_Numeric__copyOut(const void *_from, void *_to)
 {
-    struct _ice_Numeric *from = (struct _ice_Numeric *)_from;
+    const struct _ice_Numeric *from = (const struct _ice_Numeric *)_from;
     ice_Numeric *to = (ice_Numeric *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
     DDS_string_replace (from->metric_id ? from->metric_id : "", &to->metric_id);
@@ -1800,19 +1570,19 @@ __ice_Numeric__copyOut(void *_from, void *_to)
     DDS_string_replace (from->unit_id ? from->unit_id : "", &to->unit_id);
     to->value = (DDS_float)from->value;
     {
-        extern void __ice_Time_t__copyOut(void *, void *);
+        extern void __ice_Time_t__copyOut(const void *, void *);
         __ice_Time_t__copyOut(&from->device_time, &to->device_time);
     }
     {
-        extern void __ice_Time_t__copyOut(void *, void *);
+        extern void __ice_Time_t__copyOut(const void *, void *);
         __ice_Time_t__copyOut(&from->presentation_time, &to->presentation_time);
     }
 }
 
 void
-__ice_SampleArray__copyOut(void *_from, void *_to)
+__ice_SampleArray__copyOut(const void *_from, void *_to)
 {
-    struct _ice_SampleArray *from = (struct _ice_SampleArray *)_from;
+    const struct _ice_SampleArray *from = (const struct _ice_SampleArray *)_from;
     ice_SampleArray *to = (ice_SampleArray *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
     DDS_string_replace (from->metric_id ? from->metric_id : "", &to->metric_id);
@@ -1821,37 +1591,43 @@ __ice_SampleArray__copyOut(void *_from, void *_to)
     DDS_string_replace (from->unit_id ? from->unit_id : "", &to->unit_id);
     to->frequency = (DDS_long)from->frequency;
     {
-        extern void __ice_Values__copyOut(void *, void *);
+        extern void __ice_Values__copyOut(const void *, void *);
         __ice_Values__copyOut(&from->values, &to->values);
     }
     {
-        extern void __ice_Time_t__copyOut(void *, void *);
+        extern void __ice_Time_t__copyOut(const void *, void *);
         __ice_Time_t__copyOut(&from->device_time, &to->device_time);
     }
     {
-        extern void __ice_Time_t__copyOut(void *, void *);
+        extern void __ice_Time_t__copyOut(const void *, void *);
         __ice_Time_t__copyOut(&from->presentation_time, &to->presentation_time);
     }
 }
 
 void
-__ice_InfusionObjective__copyOut(void *_from, void *_to)
+__ice_InfusionObjective__copyOut(const void *_from, void *_to)
 {
-    struct _ice_InfusionObjective *from = (struct _ice_InfusionObjective *)_from;
+    const struct _ice_InfusionObjective *from = (const struct _ice_InfusionObjective *)_from;
     ice_InfusionObjective *to = (ice_InfusionObjective *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
-    DDS_string_replace (from->requestor ? from->requestor : "", &to->requestor);
+    {
+        extern void __ice_LongString__copyOut(const void *, void *);
+        __ice_LongString__copyOut(&from->requestor, &to->requestor);
+    }
     to->stopInfusion = (DDS_boolean)from->stopInfusion;
 }
 
 void
-__ice_InfusionStatus__copyOut(void *_from, void *_to)
+__ice_InfusionStatus__copyOut(const void *_from, void *_to)
 {
-    struct _ice_InfusionStatus *from = (struct _ice_InfusionStatus *)_from;
+    const struct _ice_InfusionStatus *from = (const struct _ice_InfusionStatus *)_from;
     ice_InfusionStatus *to = (ice_InfusionStatus *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
     to->infusionActive = (DDS_boolean)from->infusionActive;
-    DDS_string_replace (from->drug_name ? from->drug_name : "", &to->drug_name);
+    {
+        extern void __ice_LongString__copyOut(const void *, void *);
+        __ice_LongString__copyOut(&from->drug_name, &to->drug_name);
+    }
     to->drug_mass_mcg = (DDS_long)from->drug_mass_mcg;
     to->solution_volume_ml = (DDS_long)from->solution_volume_ml;
     to->volume_to_be_infused_ml = (DDS_long)from->volume_to_be_infused_ml;
@@ -1860,9 +1636,9 @@ __ice_InfusionStatus__copyOut(void *_from, void *_to)
 }
 
 void
-__ice_AlarmLimit__copyOut(void *_from, void *_to)
+__ice_AlarmLimit__copyOut(const void *_from, void *_to)
 {
-    struct _ice_AlarmLimit *from = (struct _ice_AlarmLimit *)_from;
+    const struct _ice_AlarmLimit *from = (const struct _ice_AlarmLimit *)_from;
     ice_AlarmLimit *to = (ice_AlarmLimit *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
     DDS_string_replace (from->metric_id ? from->metric_id : "", &to->metric_id);
@@ -1872,9 +1648,9 @@ __ice_AlarmLimit__copyOut(void *_from, void *_to)
 }
 
 void
-__ice_GlobalAlarmLimitObjective__copyOut(void *_from, void *_to)
+__ice_GlobalAlarmLimitObjective__copyOut(const void *_from, void *_to)
 {
-    struct _ice_GlobalAlarmLimitObjective *from = (struct _ice_GlobalAlarmLimitObjective *)_from;
+    const struct _ice_GlobalAlarmLimitObjective *from = (const struct _ice_GlobalAlarmLimitObjective *)_from;
     ice_GlobalAlarmLimitObjective *to = (ice_GlobalAlarmLimitObjective *)_to;
     DDS_string_replace (from->metric_id ? from->metric_id : "", &to->metric_id);
     to->limit_type = (ice_LimitType)from->limit_type;
@@ -1883,9 +1659,9 @@ __ice_GlobalAlarmLimitObjective__copyOut(void *_from, void *_to)
 }
 
 void
-__ice_LocalAlarmLimitObjective__copyOut(void *_from, void *_to)
+__ice_LocalAlarmLimitObjective__copyOut(const void *_from, void *_to)
 {
-    struct _ice_LocalAlarmLimitObjective *from = (struct _ice_LocalAlarmLimitObjective *)_from;
+    const struct _ice_LocalAlarmLimitObjective *from = (const struct _ice_LocalAlarmLimitObjective *)_from;
     ice_LocalAlarmLimitObjective *to = (ice_LocalAlarmLimitObjective *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
     DDS_string_replace (from->metric_id ? from->metric_id : "", &to->metric_id);
@@ -1895,18 +1671,18 @@ __ice_LocalAlarmLimitObjective__copyOut(void *_from, void *_to)
 }
 
 void
-__ice_DeviceAlertCondition__copyOut(void *_from, void *_to)
+__ice_DeviceAlertCondition__copyOut(const void *_from, void *_to)
 {
-    struct _ice_DeviceAlertCondition *from = (struct _ice_DeviceAlertCondition *)_from;
+    const struct _ice_DeviceAlertCondition *from = (const struct _ice_DeviceAlertCondition *)_from;
     ice_DeviceAlertCondition *to = (ice_DeviceAlertCondition *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
     DDS_string_replace (from->alert_state ? from->alert_state : "", &to->alert_state);
 }
 
 void
-__ice_Alert__copyOut(void *_from, void *_to)
+__ice_Alert__copyOut(const void *_from, void *_to)
 {
-    struct _ice_Alert *from = (struct _ice_Alert *)_from;
+    const struct _ice_Alert *from = (const struct _ice_Alert *)_from;
     ice_Alert *to = (ice_Alert *)_to;
     DDS_string_replace (from->unique_device_identifier ? from->unique_device_identifier : "", &to->unique_device_identifier);
     DDS_string_replace (from->identifier ? from->identifier : "", &to->identifier);
@@ -1914,16 +1690,20 @@ __ice_Alert__copyOut(void *_from, void *_to)
 }
 
 void
-__ice_Patient__copyOut(void *_from, void *_to)
+__ice_Patient__copyOut(const void *_from, void *_to)
 {
-    struct _ice_Patient *from = (struct _ice_Patient *)_from;
+    const struct _ice_Patient *from = (const struct _ice_Patient *)_from;
     ice_Patient *to = (ice_Patient *)_to;
     DDS_string_replace (from->mrn ? from->mrn : "", &to->mrn);
-    DDS_string_replace (from->given_name ? from->given_name : "", &to->given_name);
-    DDS_string_replace (from->family_name ? from->family_name : "", &to->family_name);
+    {
+        extern void __ice_VeryLongString__copyOut(const void *, void *);
+        __ice_VeryLongString__copyOut(&from->given_name, &to->given_name);
+    }
+    {
+        extern void __ice_VeryLongString__copyOut(const void *, void *);
+        __ice_VeryLongString__copyOut(&from->family_name, &to->family_name);
+    }
 }
-
-#include <dds_dcps_private.h>
 
 ice_UniqueDeviceIdentifier *ice_UniqueDeviceIdentifier__alloc (DDS_unsigned_long len)
 {
@@ -1945,42 +1725,39 @@ ice_UnitIdentifier *ice_UnitIdentifier__alloc (DDS_unsigned_long len)
     return (ice_UnitIdentifier *)DDS_string_alloc (len);
 }
 
-ice_LongString *ice_LongString__alloc (DDS_unsigned_long len)
+ice_utf32char *ice_utf32char__alloc (void)
 {
-    return (ice_LongString *)DDS_string_alloc (len);
+    return (ice_utf32char *)DDS_alloc(sizeof(ice_utf32char), NULL);
 }
 
-DDS_sequence_DDS_string *DDS_sequence_DDS_string__alloc (void)
+DDS_sequence_ice_utf32char *DDS_sequence_ice_utf32char__alloc (void)
 {
-    return (DDS_sequence_DDS_string *)DDS_sequence_malloc();
+    return (DDS_sequence_ice_utf32char *)DDS_sequence_malloc();
 }
 
-DDS_string *DDS_sequence_DDS_string_allocbuf (DDS_unsigned_long len)
+ice_utf32char *DDS_sequence_ice_utf32char_allocbuf (DDS_unsigned_long len)
 {
-    DDS_boolean DDS_sequence_DDS_string_freebuf (void *buffer);
-
-    return (DDS_string *)DDS_sequence_allocbuf (DDS_sequence_DDS_string_freebuf, sizeof (DDS_string), len);
+    return (ice_utf32char *)DDS_sequence_allocbuf (NULL, sizeof (ice_utf32char), len);
 }
 
-DDS_boolean DDS_sequence_DDS_string_freebuf (void *buffer)
+ice_LongString *ice_LongString__alloc (void)
 {
-    DDS_unsigned_long *count = (DDS_unsigned_long *)DDS__header (buffer);
-    DDS_string *b = (DDS_string *)buffer;
-    DDS_unsigned_long i;
-    for (i = 0; i < *count; i++) {
-        DDS_string_clean (&b[i]);
-    }
-    return TRUE;
+    return (ice_LongString *)DDS_sequence_ice_utf32char__alloc ();
 }
 
-ice_ValidTargets *ice_ValidTargets__alloc (void)
+ice_utf32char *ice_LongString_allocbuf (DDS_unsigned_long len)
 {
-    return (ice_ValidTargets *)DDS_sequence_DDS_string__alloc ();
+    return (ice_utf32char *)DDS_sequence_ice_utf32char_allocbuf(len);
 }
 
-ice_LongString *ice_ValidTargets_allocbuf (DDS_unsigned_long len)
+ice_VeryLongString *ice_VeryLongString__alloc (void)
 {
-    return (ice_LongString *)DDS_sequence_DDS_string_allocbuf(len);
+    return (ice_VeryLongString *)DDS_sequence_ice_utf32char__alloc ();
+}
+
+ice_utf32char *ice_VeryLongString_allocbuf (DDS_unsigned_long len)
+{
+    return (ice_utf32char *)DDS_sequence_ice_utf32char_allocbuf(len);
 }
 
 ice_ImageData *ice_ImageData__alloc (void)
@@ -2015,138 +1792,137 @@ DDS_float *ice_Values_allocbuf (DDS_unsigned_long len)
 
 ice_Time_t *ice_Time_t__alloc (void)
 {
-    return (ice_Time_t *)DDS__malloc (NULL, 0, sizeof(ice_Time_t));
+    return (ice_Time_t *)DDS_alloc(sizeof(ice_Time_t), NULL);
 }
 
 ice_HeartBeat *ice_HeartBeat__alloc (void)
 {
-    DDS_boolean ice_HeartBeat__free (void *object);
+    DDS_ReturnCode_t ice_HeartBeat__free (void *object);
 
-    return (ice_HeartBeat *)DDS__malloc (ice_HeartBeat__free, 0, sizeof(ice_HeartBeat));
+    return (ice_HeartBeat *)DDS_alloc(sizeof(ice_HeartBeat), ice_HeartBeat__free);
 }
 
-DDS_boolean ice_HeartBeat__free (void *object)
+DDS_ReturnCode_t ice_HeartBeat__free (void *object)
 {
     ice_HeartBeat *o = (ice_HeartBeat *)object;
 
     DDS_string_clean (&o->unique_device_identifier);
     DDS_string_clean (&o->type);
-    return TRUE;
+    return DDS_RETCODE_OK;
 }
 
 ice_TimeSync *ice_TimeSync__alloc (void)
 {
-    DDS_boolean ice_TimeSync__free (void *object);
+    DDS_ReturnCode_t ice_TimeSync__free (void *object);
 
-    return (ice_TimeSync *)DDS__malloc (ice_TimeSync__free, 0, sizeof(ice_TimeSync));
+    return (ice_TimeSync *)DDS_alloc(sizeof(ice_TimeSync), ice_TimeSync__free);
 }
 
-DDS_boolean ice_TimeSync__free (void *object)
+DDS_ReturnCode_t ice_TimeSync__free (void *object)
 {
     ice_TimeSync *o = (ice_TimeSync *)object;
 
     DDS_string_clean (&o->heartbeat_source);
     DDS_string_clean (&o->heartbeat_recipient);
-    return TRUE;
+    return DDS_RETCODE_OK;
 }
 
 ice_Image *ice_Image__alloc (void)
 {
-    DDS_boolean ice_Image__free (void *object);
+    DDS_ReturnCode_t ice_Image__free (void *object);
 
-    return (ice_Image *)DDS__malloc (ice_Image__free, 0, sizeof(ice_Image));
+    return (ice_Image *)DDS_alloc(sizeof(ice_Image), ice_Image__free);
 }
 
-DDS_boolean ice_Image__free (void *object)
+DDS_ReturnCode_t ice_Image__free (void *object)
 {
     ice_Image *o = (ice_Image *)object;
 
     DDS_string_clean (&o->content_type);
-    DDS_sequence_clean (&o->image);
-    return TRUE;
+    DDS_sequence_clean ((_DDS_sequence)&o->image);
+    return DDS_RETCODE_OK;
 }
 
 ice_DeviceIdentity *ice_DeviceIdentity__alloc (void)
 {
-    DDS_boolean ice_DeviceIdentity__free (void *object);
+    DDS_ReturnCode_t ice_DeviceIdentity__free (void *object);
 
-    return (ice_DeviceIdentity *)DDS__malloc (ice_DeviceIdentity__free, 0, sizeof(ice_DeviceIdentity));
+    return (ice_DeviceIdentity *)DDS_alloc(sizeof(ice_DeviceIdentity), ice_DeviceIdentity__free);
 }
 
-DDS_boolean ice_DeviceIdentity__free (void *object)
+DDS_ReturnCode_t ice_DeviceIdentity__free (void *object)
 {
     ice_DeviceIdentity *o = (ice_DeviceIdentity *)object;
 
     DDS_string_clean (&o->unique_device_identifier);
-    DDS_string_clean (&o->manufacturer);
-    DDS_string_clean (&o->model);
-    DDS_string_clean (&o->serial_number);
+    DDS_sequence_clean ((_DDS_sequence)&o->manufacturer);
+    DDS_sequence_clean ((_DDS_sequence)&o->model);
+    DDS_sequence_clean ((_DDS_sequence)&o->serial_number);
     {
-    extern DDS_boolean ice_Image__free(void *object);
+    extern DDS_ReturnCode_t ice_Image__free(void *object);
     ice_Image__free (&o->icon);
     }
     DDS_string_clean (&o->build);
     DDS_string_clean (&o->operating_system);
-    return TRUE;
+    return DDS_RETCODE_OK;
 }
 
 ice_DeviceConnectivity *ice_DeviceConnectivity__alloc (void)
 {
-    DDS_boolean ice_DeviceConnectivity__free (void *object);
+    DDS_ReturnCode_t ice_DeviceConnectivity__free (void *object);
 
-    return (ice_DeviceConnectivity *)DDS__malloc (ice_DeviceConnectivity__free, 0, sizeof(ice_DeviceConnectivity));
+    return (ice_DeviceConnectivity *)DDS_alloc(sizeof(ice_DeviceConnectivity), ice_DeviceConnectivity__free);
 }
 
-DDS_boolean ice_DeviceConnectivity__free (void *object)
+DDS_ReturnCode_t ice_DeviceConnectivity__free (void *object)
 {
     ice_DeviceConnectivity *o = (ice_DeviceConnectivity *)object;
 
     DDS_string_clean (&o->unique_device_identifier);
-    DDS_string_clean (&o->info);
-    DDS_sequence_clean (&o->valid_targets);
-    return TRUE;
+    DDS_sequence_clean ((_DDS_sequence)&o->info);
+    return DDS_RETCODE_OK;
 }
 
 ice_MDSConnectivity *ice_MDSConnectivity__alloc (void)
 {
-    DDS_boolean ice_MDSConnectivity__free (void *object);
+    DDS_ReturnCode_t ice_MDSConnectivity__free (void *object);
 
-    return (ice_MDSConnectivity *)DDS__malloc (ice_MDSConnectivity__free, 0, sizeof(ice_MDSConnectivity));
+    return (ice_MDSConnectivity *)DDS_alloc(sizeof(ice_MDSConnectivity), ice_MDSConnectivity__free);
 }
 
-DDS_boolean ice_MDSConnectivity__free (void *object)
+DDS_ReturnCode_t ice_MDSConnectivity__free (void *object)
 {
     ice_MDSConnectivity *o = (ice_MDSConnectivity *)object;
 
     DDS_string_clean (&o->unique_device_identifier);
     DDS_string_clean (&o->partition);
-    return TRUE;
+    return DDS_RETCODE_OK;
 }
 
 ice_MDSConnectivityObjective *ice_MDSConnectivityObjective__alloc (void)
 {
-    DDS_boolean ice_MDSConnectivityObjective__free (void *object);
+    DDS_ReturnCode_t ice_MDSConnectivityObjective__free (void *object);
 
-    return (ice_MDSConnectivityObjective *)DDS__malloc (ice_MDSConnectivityObjective__free, 0, sizeof(ice_MDSConnectivityObjective));
+    return (ice_MDSConnectivityObjective *)DDS_alloc(sizeof(ice_MDSConnectivityObjective), ice_MDSConnectivityObjective__free);
 }
 
-DDS_boolean ice_MDSConnectivityObjective__free (void *object)
+DDS_ReturnCode_t ice_MDSConnectivityObjective__free (void *object)
 {
     ice_MDSConnectivityObjective *o = (ice_MDSConnectivityObjective *)object;
 
     DDS_string_clean (&o->unique_device_identifier);
     DDS_string_clean (&o->partition);
-    return TRUE;
+    return DDS_RETCODE_OK;
 }
 
 ice_Numeric *ice_Numeric__alloc (void)
 {
-    DDS_boolean ice_Numeric__free (void *object);
+    DDS_ReturnCode_t ice_Numeric__free (void *object);
 
-    return (ice_Numeric *)DDS__malloc (ice_Numeric__free, 0, sizeof(ice_Numeric));
+    return (ice_Numeric *)DDS_alloc(sizeof(ice_Numeric), ice_Numeric__free);
 }
 
-DDS_boolean ice_Numeric__free (void *object)
+DDS_ReturnCode_t ice_Numeric__free (void *object)
 {
     ice_Numeric *o = (ice_Numeric *)object;
 
@@ -2154,17 +1930,17 @@ DDS_boolean ice_Numeric__free (void *object)
     DDS_string_clean (&o->metric_id);
     DDS_string_clean (&o->vendor_metric_id);
     DDS_string_clean (&o->unit_id);
-    return TRUE;
+    return DDS_RETCODE_OK;
 }
 
 ice_SampleArray *ice_SampleArray__alloc (void)
 {
-    DDS_boolean ice_SampleArray__free (void *object);
+    DDS_ReturnCode_t ice_SampleArray__free (void *object);
 
-    return (ice_SampleArray *)DDS__malloc (ice_SampleArray__free, 0, sizeof(ice_SampleArray));
+    return (ice_SampleArray *)DDS_alloc(sizeof(ice_SampleArray), ice_SampleArray__free);
 }
 
-DDS_boolean ice_SampleArray__free (void *object)
+DDS_ReturnCode_t ice_SampleArray__free (void *object)
 {
     ice_SampleArray *o = (ice_SampleArray *)object;
 
@@ -2172,140 +1948,140 @@ DDS_boolean ice_SampleArray__free (void *object)
     DDS_string_clean (&o->metric_id);
     DDS_string_clean (&o->vendor_metric_id);
     DDS_string_clean (&o->unit_id);
-    DDS_sequence_clean (&o->values);
-    return TRUE;
+    DDS_sequence_clean ((_DDS_sequence)&o->values);
+    return DDS_RETCODE_OK;
 }
 
 ice_InfusionObjective *ice_InfusionObjective__alloc (void)
 {
-    DDS_boolean ice_InfusionObjective__free (void *object);
+    DDS_ReturnCode_t ice_InfusionObjective__free (void *object);
 
-    return (ice_InfusionObjective *)DDS__malloc (ice_InfusionObjective__free, 0, sizeof(ice_InfusionObjective));
+    return (ice_InfusionObjective *)DDS_alloc(sizeof(ice_InfusionObjective), ice_InfusionObjective__free);
 }
 
-DDS_boolean ice_InfusionObjective__free (void *object)
+DDS_ReturnCode_t ice_InfusionObjective__free (void *object)
 {
     ice_InfusionObjective *o = (ice_InfusionObjective *)object;
 
     DDS_string_clean (&o->unique_device_identifier);
-    DDS_string_clean (&o->requestor);
-    return TRUE;
+    DDS_sequence_clean ((_DDS_sequence)&o->requestor);
+    return DDS_RETCODE_OK;
 }
 
 ice_InfusionStatus *ice_InfusionStatus__alloc (void)
 {
-    DDS_boolean ice_InfusionStatus__free (void *object);
+    DDS_ReturnCode_t ice_InfusionStatus__free (void *object);
 
-    return (ice_InfusionStatus *)DDS__malloc (ice_InfusionStatus__free, 0, sizeof(ice_InfusionStatus));
+    return (ice_InfusionStatus *)DDS_alloc(sizeof(ice_InfusionStatus), ice_InfusionStatus__free);
 }
 
-DDS_boolean ice_InfusionStatus__free (void *object)
+DDS_ReturnCode_t ice_InfusionStatus__free (void *object)
 {
     ice_InfusionStatus *o = (ice_InfusionStatus *)object;
 
     DDS_string_clean (&o->unique_device_identifier);
-    DDS_string_clean (&o->drug_name);
-    return TRUE;
+    DDS_sequence_clean ((_DDS_sequence)&o->drug_name);
+    return DDS_RETCODE_OK;
 }
 
 ice_AlarmLimit *ice_AlarmLimit__alloc (void)
 {
-    DDS_boolean ice_AlarmLimit__free (void *object);
+    DDS_ReturnCode_t ice_AlarmLimit__free (void *object);
 
-    return (ice_AlarmLimit *)DDS__malloc (ice_AlarmLimit__free, 0, sizeof(ice_AlarmLimit));
+    return (ice_AlarmLimit *)DDS_alloc(sizeof(ice_AlarmLimit), ice_AlarmLimit__free);
 }
 
-DDS_boolean ice_AlarmLimit__free (void *object)
+DDS_ReturnCode_t ice_AlarmLimit__free (void *object)
 {
     ice_AlarmLimit *o = (ice_AlarmLimit *)object;
 
     DDS_string_clean (&o->unique_device_identifier);
     DDS_string_clean (&o->metric_id);
     DDS_string_clean (&o->unit_identifier);
-    return TRUE;
+    return DDS_RETCODE_OK;
 }
 
 ice_GlobalAlarmLimitObjective *ice_GlobalAlarmLimitObjective__alloc (void)
 {
-    DDS_boolean ice_GlobalAlarmLimitObjective__free (void *object);
+    DDS_ReturnCode_t ice_GlobalAlarmLimitObjective__free (void *object);
 
-    return (ice_GlobalAlarmLimitObjective *)DDS__malloc (ice_GlobalAlarmLimitObjective__free, 0, sizeof(ice_GlobalAlarmLimitObjective));
+    return (ice_GlobalAlarmLimitObjective *)DDS_alloc(sizeof(ice_GlobalAlarmLimitObjective), ice_GlobalAlarmLimitObjective__free);
 }
 
-DDS_boolean ice_GlobalAlarmLimitObjective__free (void *object)
+DDS_ReturnCode_t ice_GlobalAlarmLimitObjective__free (void *object)
 {
     ice_GlobalAlarmLimitObjective *o = (ice_GlobalAlarmLimitObjective *)object;
 
     DDS_string_clean (&o->metric_id);
     DDS_string_clean (&o->unit_identifier);
-    return TRUE;
+    return DDS_RETCODE_OK;
 }
 
 ice_LocalAlarmLimitObjective *ice_LocalAlarmLimitObjective__alloc (void)
 {
-    DDS_boolean ice_LocalAlarmLimitObjective__free (void *object);
+    DDS_ReturnCode_t ice_LocalAlarmLimitObjective__free (void *object);
 
-    return (ice_LocalAlarmLimitObjective *)DDS__malloc (ice_LocalAlarmLimitObjective__free, 0, sizeof(ice_LocalAlarmLimitObjective));
+    return (ice_LocalAlarmLimitObjective *)DDS_alloc(sizeof(ice_LocalAlarmLimitObjective), ice_LocalAlarmLimitObjective__free);
 }
 
-DDS_boolean ice_LocalAlarmLimitObjective__free (void *object)
+DDS_ReturnCode_t ice_LocalAlarmLimitObjective__free (void *object)
 {
     ice_LocalAlarmLimitObjective *o = (ice_LocalAlarmLimitObjective *)object;
 
     DDS_string_clean (&o->unique_device_identifier);
     DDS_string_clean (&o->metric_id);
     DDS_string_clean (&o->unit_identifier);
-    return TRUE;
+    return DDS_RETCODE_OK;
 }
 
 ice_DeviceAlertCondition *ice_DeviceAlertCondition__alloc (void)
 {
-    DDS_boolean ice_DeviceAlertCondition__free (void *object);
+    DDS_ReturnCode_t ice_DeviceAlertCondition__free (void *object);
 
-    return (ice_DeviceAlertCondition *)DDS__malloc (ice_DeviceAlertCondition__free, 0, sizeof(ice_DeviceAlertCondition));
+    return (ice_DeviceAlertCondition *)DDS_alloc(sizeof(ice_DeviceAlertCondition), ice_DeviceAlertCondition__free);
 }
 
-DDS_boolean ice_DeviceAlertCondition__free (void *object)
+DDS_ReturnCode_t ice_DeviceAlertCondition__free (void *object)
 {
     ice_DeviceAlertCondition *o = (ice_DeviceAlertCondition *)object;
 
     DDS_string_clean (&o->unique_device_identifier);
     DDS_string_clean (&o->alert_state);
-    return TRUE;
+    return DDS_RETCODE_OK;
 }
 
 ice_Alert *ice_Alert__alloc (void)
 {
-    DDS_boolean ice_Alert__free (void *object);
+    DDS_ReturnCode_t ice_Alert__free (void *object);
 
-    return (ice_Alert *)DDS__malloc (ice_Alert__free, 0, sizeof(ice_Alert));
+    return (ice_Alert *)DDS_alloc(sizeof(ice_Alert), ice_Alert__free);
 }
 
-DDS_boolean ice_Alert__free (void *object)
+DDS_ReturnCode_t ice_Alert__free (void *object)
 {
     ice_Alert *o = (ice_Alert *)object;
 
     DDS_string_clean (&o->unique_device_identifier);
     DDS_string_clean (&o->identifier);
     DDS_string_clean (&o->text);
-    return TRUE;
+    return DDS_RETCODE_OK;
 }
 
 ice_Patient *ice_Patient__alloc (void)
 {
-    DDS_boolean ice_Patient__free (void *object);
+    DDS_ReturnCode_t ice_Patient__free (void *object);
 
-    return (ice_Patient *)DDS__malloc (ice_Patient__free, 0, sizeof(ice_Patient));
+    return (ice_Patient *)DDS_alloc(sizeof(ice_Patient), ice_Patient__free);
 }
 
-DDS_boolean ice_Patient__free (void *object)
+DDS_ReturnCode_t ice_Patient__free (void *object)
 {
     ice_Patient *o = (ice_Patient *)object;
 
     DDS_string_clean (&o->mrn);
-    DDS_string_clean (&o->given_name);
-    DDS_string_clean (&o->family_name);
-    return TRUE;
+    DDS_sequence_clean ((_DDS_sequence)&o->given_name);
+    DDS_sequence_clean ((_DDS_sequence)&o->family_name);
+    return DDS_RETCODE_OK;
 }
 
 const char * ice_HeartBeat_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><Module name=\"ice\"><TypeDef name=\"UniqueDeviceIdentifier\"><String length=\"64\"/>",
@@ -2320,26 +2096,26 @@ const char * ice_TimeSync_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><Modu
 "</Struct></Module></MetaData>"};
 const c_ulong  ice_TimeSync_metaDescriptorArrLength = 6;
 const char * ice_DeviceIdentity_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><Module name=\"ice\"><TypeDef name=\"UniqueDeviceIdentifier\"><String length=\"64\"/>",
-"</TypeDef><TypeDef name=\"LongString\"><String length=\"128\"/></TypeDef><TypeDef name=\"ImageData\">",
-"<Sequence size=\"65530\"><Octet/></Sequence></TypeDef><Struct name=\"Image\"><Member name=\"content_type\">",
+"</TypeDef><Struct name=\"utf32char\"><Member name=\"value\"><Array size=\"4\"><Octet/></Array></Member>",
+"</Struct><TypeDef name=\"ImageData\"><Sequence size=\"65530\"><Octet/></Sequence></TypeDef><TypeDef name=\"LongString\">",
+"<Sequence size=\"128\"><Type name=\"utf32char\"/></Sequence></TypeDef><Struct name=\"Image\"><Member name=\"content_type\">",
 "<String length=\"64\"/></Member><Member name=\"image\"><Type name=\"ImageData\"/></Member></Struct><Struct name=\"DeviceIdentity\">",
 "<Member name=\"unique_device_identifier\"><Type name=\"UniqueDeviceIdentifier\"/></Member><Member name=\"manufacturer\">",
 "<Type name=\"LongString\"/></Member><Member name=\"model\"><Type name=\"LongString\"/></Member><Member name=\"serial_number\">",
 "<Type name=\"LongString\"/></Member><Member name=\"icon\"><Type name=\"Image\"/></Member><Member name=\"build\">",
 "<String length=\"128\"/></Member><Member name=\"operating_system\"><String length=\"128\"/></Member></Struct>",
 "</Module></MetaData>"};
-const c_ulong  ice_DeviceIdentity_metaDescriptorArrLength = 9;
+const c_ulong  ice_DeviceIdentity_metaDescriptorArrLength = 10;
 const char * ice_DeviceConnectivity_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><Module name=\"ice\"><TypeDef name=\"UniqueDeviceIdentifier\"><String length=\"64\"/>",
 "</TypeDef><Enum name=\"ConnectionState\"><Element name=\"Initial\" value=\"0\"/><Element name=\"Connected\" value=\"1\"/>",
 "<Element name=\"Connecting\" value=\"2\"/><Element name=\"Negotiating\" value=\"3\"/><Element name=\"Terminal\" value=\"4\"/>",
 "</Enum><Enum name=\"ConnectionType\"><Element name=\"Serial\" value=\"0\"/><Element name=\"Simulated\" value=\"1\"/>",
-"<Element name=\"Network\" value=\"2\"/></Enum><TypeDef name=\"LongString\"><String length=\"128\"/></TypeDef>",
-"<TypeDef name=\"ValidTargets\"><Sequence size=\"128\"><Type name=\"LongString\"/></Sequence></TypeDef>",
-"<Struct name=\"DeviceConnectivity\"><Member name=\"unique_device_identifier\"><Type name=\"UniqueDeviceIdentifier\"/>",
+"<Element name=\"Network\" value=\"2\"/></Enum><Struct name=\"utf32char\"><Member name=\"value\"><Array size=\"4\">",
+"<Octet/></Array></Member></Struct><TypeDef name=\"LongString\"><Sequence size=\"128\"><Type name=\"utf32char\"/>",
+"</Sequence></TypeDef><Struct name=\"DeviceConnectivity\"><Member name=\"unique_device_identifier\"><Type name=\"UniqueDeviceIdentifier\"/>",
 "</Member><Member name=\"state\"><Type name=\"ConnectionState\"/></Member><Member name=\"type\"><Type name=\"ConnectionType\"/>",
-"</Member><Member name=\"info\"><Type name=\"LongString\"/></Member><Member name=\"valid_targets\"><Type name=\"ValidTargets\"/>",
-"</Member></Struct></Module></MetaData>"};
-const c_ulong  ice_DeviceConnectivity_metaDescriptorArrLength = 10;
+"</Member><Member name=\"info\"><Type name=\"LongString\"/></Member></Struct></Module></MetaData>"};
+const c_ulong  ice_DeviceConnectivity_metaDescriptorArrLength = 9;
 const char * ice_MDSConnectivity_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><Module name=\"ice\"><TypeDef name=\"UniqueDeviceIdentifier\"><String length=\"64\"/>",
 "</TypeDef><Struct name=\"MDSConnectivity\"><Member name=\"unique_device_identifier\"><Type name=\"UniqueDeviceIdentifier\"/>",
 "</Member><Member name=\"partition\"><String length=\"128\"/></Member></Struct></Module></MetaData>"};
@@ -2373,18 +2149,21 @@ const char * ice_SampleArray_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><M
 "</Module></MetaData>"};
 const c_ulong  ice_SampleArray_metaDescriptorArrLength = 12;
 const char * ice_InfusionObjective_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><Module name=\"ice\"><TypeDef name=\"UniqueDeviceIdentifier\"><String length=\"64\"/>",
-"</TypeDef><TypeDef name=\"LongString\"><String length=\"128\"/></TypeDef><Struct name=\"InfusionObjective\">",
-"<Member name=\"unique_device_identifier\"><Type name=\"UniqueDeviceIdentifier\"/></Member><Member name=\"requestor\">",
-"<Type name=\"LongString\"/></Member><Member name=\"stopInfusion\"><Boolean/></Member></Struct></Module>",
-"</MetaData>"};
-const c_ulong  ice_InfusionObjective_metaDescriptorArrLength = 5;
+"</TypeDef><Struct name=\"utf32char\"><Member name=\"value\"><Array size=\"4\"><Octet/></Array></Member>",
+"</Struct><TypeDef name=\"LongString\"><Sequence size=\"128\"><Type name=\"utf32char\"/></Sequence></TypeDef>",
+"<Struct name=\"InfusionObjective\"><Member name=\"unique_device_identifier\"><Type name=\"UniqueDeviceIdentifier\"/>",
+"</Member><Member name=\"requestor\"><Type name=\"LongString\"/></Member><Member name=\"stopInfusion\">",
+"<Boolean/></Member></Struct></Module></MetaData>"};
+const c_ulong  ice_InfusionObjective_metaDescriptorArrLength = 6;
 const char * ice_InfusionStatus_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><Module name=\"ice\"><TypeDef name=\"UniqueDeviceIdentifier\"><String length=\"64\"/>",
-"</TypeDef><Struct name=\"InfusionStatus\"><Member name=\"unique_device_identifier\"><Type name=\"UniqueDeviceIdentifier\"/>",
-"</Member><Member name=\"infusionActive\"><Boolean/></Member><Member name=\"drug_name\"><String length=\"128\"/>",
+"</TypeDef><Struct name=\"utf32char\"><Member name=\"value\"><Array size=\"4\"><Octet/></Array></Member>",
+"</Struct><TypeDef name=\"LongString\"><Sequence size=\"128\"><Type name=\"utf32char\"/></Sequence></TypeDef>",
+"<Struct name=\"InfusionStatus\"><Member name=\"unique_device_identifier\"><Type name=\"UniqueDeviceIdentifier\"/>",
+"</Member><Member name=\"infusionActive\"><Boolean/></Member><Member name=\"drug_name\"><Type name=\"LongString\"/>",
 "</Member><Member name=\"drug_mass_mcg\"><Long/></Member><Member name=\"solution_volume_ml\"><Long/></Member>",
 "<Member name=\"volume_to_be_infused_ml\"><Long/></Member><Member name=\"infusion_duration_seconds\"><Long/>",
 "</Member><Member name=\"infusion_fraction_complete\"><Float/></Member></Struct></Module></MetaData>"};
-const c_ulong  ice_InfusionStatus_metaDescriptorArrLength = 6;
+const c_ulong  ice_InfusionStatus_metaDescriptorArrLength = 8;
 const char * ice_AlarmLimit_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><Module name=\"ice\"><TypeDef name=\"UniqueDeviceIdentifier\"><String length=\"64\"/>",
 "</TypeDef><TypeDef name=\"MetricIdentifier\"><String length=\"64\"/></TypeDef><Enum name=\"LimitType\">",
 "<Element name=\"low_limit\" value=\"0\"/><Element name=\"high_limit\" value=\"1\"/></Enum><TypeDef name=\"UnitIdentifier\">",
@@ -2417,10 +2196,12 @@ const char * ice_Alert_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><Module 
 "</Member><Member name=\"identifier\"><String length=\"256\"/></Member><Member name=\"text\"><String length=\"256\"/>",
 "</Member></Struct></Module></MetaData>"};
 const c_ulong  ice_Alert_metaDescriptorArrLength = 4;
-const char * ice_Patient_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><Module name=\"ice\"><Struct name=\"Patient\"><Member name=\"mrn\"><String length=\"16\"/>",
-"</Member><Member name=\"given_name\"><String length=\"256\"/></Member><Member name=\"family_name\"><String length=\"256\"/>",
-"</Member></Struct></Module></MetaData>"};
-const c_ulong  ice_Patient_metaDescriptorArrLength = 3;
+const char * ice_Patient_metaDescriptor[] = {"<MetaData version=\"1.0.0\"><Module name=\"ice\"><Struct name=\"utf32char\"><Member name=\"value\"><Array size=\"4\">",
+"<Octet/></Array></Member></Struct><TypeDef name=\"VeryLongString\"><Sequence size=\"256\"><Type name=\"utf32char\"/>",
+"</Sequence></TypeDef><Struct name=\"Patient\"><Member name=\"mrn\"><String length=\"16\"/></Member><Member name=\"given_name\">",
+"<Type name=\"VeryLongString\"/></Member><Member name=\"family_name\"><Type name=\"VeryLongString\"/></Member>",
+"</Struct></Module></MetaData>"};
+const c_ulong  ice_Patient_metaDescriptorArrLength = 5;
 #if defined (__cplusplus)
 }
 #endif

@@ -69,13 +69,17 @@ module ice {
    * A type for "long" string fields such as those descriptive of persons, places, and 
    * things.  These are UTF32 encoded to support international use.
    */
-  typedef string<128> LongString;
+  struct utf32char {
+     octet value[4];
+  };
+  typedef sequence<utf32char, 128> LongString;
+  typedef sequence<utf32char, 256> VeryLongString;
   
   /**
    * For a connected device these are the valid targets the device adapter might connect
    * to.  These are often the names of serial (RS-232) ports available on the adapter.
    */
-  typedef sequence<LongString, 128> ValidTargets;
+  /*typedef sequence<LongString, 128> ValidTargets;*/
   
   /**
    * Contains image data with the type specified externally.
@@ -212,7 +216,7 @@ module ice {
     ConnectionState state;
     ConnectionType type;
     LongString info;
-    ValidTargets valid_targets;
+    /*ValidTargets valid_targets;*/
   }; //@top-level true //@Extensibility MUTABLE_EXTENSIBILITY
   #pragma keylist DeviceConnectivity unique_device_identifier
   const string DeviceConnectivityTopic = "DeviceConnectivity";
@@ -373,7 +377,7 @@ module ice {
     // derived values are omitted to avoid inconsistent states
 
     // what's in the bag
-    string<128> drug_name;
+    LongString drug_name;
     long drug_mass_mcg;
     long solution_volume_ml;
     // concentration can be derived
@@ -524,8 +528,8 @@ module ice {
    */  
   struct Patient {
     string<16> mrn; //@key
-    string<256> given_name;
-    string<256> family_name;
+    VeryLongString given_name;
+    VeryLongString family_name;
   };
   #pragma keylist Patient mrn
   const string PatientTopic = "Patient";

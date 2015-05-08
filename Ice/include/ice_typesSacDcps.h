@@ -1,6 +1,7 @@
 #ifndef ICE_TYPESSACDCPS_H
 #define ICE_TYPESSACDCPS_H
 
+#include "dds_dcps.h"
 #include "ice_typesDcps.h"
 
 #ifndef DDS_API
