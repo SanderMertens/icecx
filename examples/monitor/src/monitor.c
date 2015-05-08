@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 
     /* -- Create DDS connector for domain 0 and partition ICE, store devices in scope 'devices' */
     deviceCache = cx_declare(NULL, "devices", cx_void_o);
-    ddsx = Ice_DdsConnector__create(0, "ICE", deviceCache);
+    ddsx = Ice_DdsConnector__create(0, "", deviceCache);
 
     /* -- Create two observers that listen for updates and deletes in the 'devices' scope */
     onUpdate = cx_observer__create(deviceCache, CX_ON_DEFINE|CX_ON_UPDATE|CX_ON_SCOPE, NULL, 0, NULL, NULL);
