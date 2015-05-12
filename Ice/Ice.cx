@@ -11,6 +11,11 @@ struct Image::
     content_type: string
     image: sequence{octet, 65530}
 
+// Time type
+struct Time::
+    sec: int32
+    nanosec: int32
+
 // Device connectivity kinds
 enum ConnectionState:: Connected, Negotiating, Disconnected
 
@@ -19,6 +24,7 @@ class DdsConnector::
     domainId: int32 // DDS domain ID
     partition: string // DDS partition
     deviceCache: object // Scope where to store the devices (default = root)
+    numericCache: object // Scope to store the numerics
 
     // Private variables for storing DDS entities
     dp: Ice::Participant, private|local
@@ -26,6 +32,8 @@ class DdsConnector::
     topic_deviceIdentity: Ice::Topic, private|local
     dr_deviceIdentity: Ice::Reader, private|local
     dr_deviceConnectivity: Ice::Reader, private|local
+    dr_numeric: Ice::Reader, private|local
+    dr_sampleArray: Ice::Reader, private|local
 
     // Constructor & destructor
     int16 construct()
@@ -41,3 +49,14 @@ class Device::
     build: string
     operating_system: string
 
+class Numeric::
+    unique_device_identifier: string
+    metric_id: string
+    vendor_metric_id: string
+    instance_id: int32
+    unit_id: string
+    value: float32
+    device_time: Time
+    presentation_time: Time
+
+  

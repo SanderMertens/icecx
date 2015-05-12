@@ -16,6 +16,7 @@ extern "C" {
 /* Casting macro's for classes */
 #define Ice_DdsConnector(o) ((Ice_DdsConnector)cx_assertType((cx_type)Ice_DdsConnector_o, o))
 #define Ice_Device(o) ((Ice_Device)cx_assertType((cx_type)Ice_Device_o, o))
+#define Ice_Numeric(o) ((Ice_Numeric)cx_assertType((cx_type)Ice_Numeric_o, o))
 
 /* Type definitions */
 /* ::Ice::ConnectionState */
@@ -44,11 +45,14 @@ CX_CLASS_DEF(Ice_DdsConnector) {
     cx_int32 domainId;
     cx_string partition;
     cx_object deviceCache;
+    cx_object numericCache;
     Ice_Participant dp;
     Ice_Subscriber sub;
     Ice_Topic topic_deviceIdentity;
     Ice_Reader dr_deviceIdentity;
     Ice_Reader dr_deviceConnectivity;
+    Ice_Reader dr_numeric;
+    Ice_Reader dr_sampleArray;
 };
 
 CX_SEQUENCE(cx_octet_seq65530, cx_octet,);
@@ -72,6 +76,28 @@ CX_CLASS_DEF(Ice_Device) {
     Ice_Image icon;
     cx_string build;
     cx_string operating_system;
+};
+
+/*  ::Ice::Time */
+typedef struct Ice_Time Ice_Time;
+
+struct Ice_Time {
+    cx_int32 sec;
+    cx_int32 nanosec;
+};
+
+/*  ::Ice::Numeric */
+CX_CLASS(Ice_Numeric);
+
+CX_CLASS_DEF(Ice_Numeric) {
+    cx_string unique_device_identifier;
+    cx_string metric_id;
+    cx_string vendor_metric_id;
+    cx_int32 instance_id;
+    cx_string unit_id;
+    cx_float32 value;
+    Ice_Time device_time;
+    Ice_Time presentation_time;
 };
 
 #ifdef __cplusplus
