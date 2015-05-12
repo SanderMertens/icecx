@@ -1,11 +1,16 @@
-void devices, exitEvent
+void devices, numerics, exitEvent
+
+web::server p: 8000
 
 // Create the DDS to ICE connector
-Ice::DdsConnector ddsx: 0, "ICE", devices
+Ice::DdsConnector ddsx: 0, "", devices, numerics
 
 // Create cortex observers
 on define|update scope devices: "[ update ] ${observable.nameof()} $observable"
 on delete scope devices: "[ delete ] ${observable.nameof()}"
+
+on define|update scope numerics: "[ update ] ${observable.nameof()} $observable"
+on delete scope numerics: "[ delete ] ${observable.nameof()}"
 
 // Don't quit application
 wait exitEvent
