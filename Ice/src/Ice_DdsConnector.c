@@ -14,7 +14,8 @@
 #include "dds_dcps.h"
 #include "CheckStatus.h"
 
-#define on_data_available(TOPIC, CACHE_NAME, TYPE_OBJECT, TYPE_NAME, ...) \
+
+#define on_data_available(TOPIC, CACHE_NAME, TYPE_OBJECT, TYPE_NAME) \
 void Ice_DdsConnector_ ## TOPIC ## _delete(Ice_DdsConnector _this, TYPE_NAME obj) {\
     CX_UNUSED(_this);\
     cx_destruct(obj);\
@@ -43,13 +44,13 @@ void Ice_DdsConnector_ ## TOPIC ## _onDataAvailable(Ice_DdsConnector _this, DDS_
 \
         /* Find CACHE_NAME in cortex cache */\
         CACHE_NAME = cx_resolve(_this->CACHE_NAME ## Cache, \
-            sampleSeq._buffer[i].__VA_ARGS__);\
+            Ice_DdsConnector_ ## TOPIC ## _key(_this, &sampleSeq._buffer[i]));\
 \
         /* If y is not found, declare it */\
         if (!CACHE_NAME) {\
             CACHE_NAME = cx_declare(\
                 _this-> CACHE_NAME ## Cache, \
-                sampleSeq._buffer[i].__VA_ARGS__,\
+                Ice_DdsConnector_ ## TOPIC ## _key(_this, &sampleSeq._buffer[i]),\
                 cx_type(TYPE_OBJECT));\
         } else {\
             /* If CACHE_NAME is found, validate it is of the correct type */\
@@ -94,6 +95,21 @@ char * utf32Hack(ice_LongString *longString) {
     buffer[longString->_length] = '\0';
     return (char*) buffer;
  }
+
+char *Ice_DdsConnector_DeviceIdentity_key(Ice_DdsConnector _this, ice_DeviceIdentity *src) {
+    return src->unique_device_identifier;
+}
+
+char *Ice_DdsConnector_Numeric_key(Ice_DdsConnector _this, ice_Numeric *src) {
+    static char BUFFER[1024];
+
+    snprintf(BUFFER, 1024, "%s-%s-%s-%d-%s",
+        src->unique_device_identifier, src->metric_id,
+        src->vendor_metric_id, src->instance_id, src->unit_id);
+
+
+    return BUFFER;
+}
 
 /* -- Copy DDS data from DDS to cortex */
 void Ice_DdsConnector_DeviceIdentity_update(Ice_DdsConnector _this, Ice_Device dest, ice_DeviceIdentity *src) {
@@ -196,9 +212,8 @@ Ice_CrudKind Ice_DdsToCrudKind(DDS_ViewStateKind vs, DDS_InstanceStateKind is) {
     return result;
 }
 
-on_data_available(DeviceIdentity, device, Ice_Device_o, Ice_Device, 
-    unique_device_identifier)
-on_data_available(Numeric, numeric, Ice_Numeric_o, Ice_Numeric, unique_device_identifier)
+on_data_available(DeviceIdentity, device, Ice_Device_o, Ice_Device)
+on_data_available(Numeric, numeric, Ice_Numeric_o, Ice_Numeric)
 
 /* $end */
 
