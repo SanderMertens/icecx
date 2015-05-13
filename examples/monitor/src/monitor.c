@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
     onDeviceDelete = cx_observer__create(deviceCache, CX_ON_DELETE|CX_ON_SCOPE, NULL, 0, NULL, NULL);
     CX_OBSERVER_SET_CALLBACK(onDeviceDelete, on_device_delete);
 
-    /* -- Create two observers that listen for updates and deletes in the 'devices' scope */
+    /* -- Create two observers that listen for updates and deletes in the 'numerics' scope */
     onNumericUpdate = cx_observer__create(numericCache, CX_ON_DEFINE|CX_ON_UPDATE|CX_ON_SCOPE, NULL, 0, NULL, NULL);
     CX_OBSERVER_SET_CALLBACK(onNumericUpdate, on_numeric_update);
     onNumericDelete = cx_observer__create(numericCache, CX_ON_DELETE|CX_ON_SCOPE, NULL, 0, NULL, NULL);
