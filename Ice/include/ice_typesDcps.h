@@ -1,7 +1,7 @@
 #ifndef ICE_TYPESDCPS_H
 #define ICE_TYPESDCPS_H
 
-#include <dds_primitive_types.h>
+#include <dds_dcps.h>
 
 
 typedef DDS_string ice_UniqueDeviceIdentifier;
@@ -57,19 +57,6 @@ typedef DDS_sequence_ice_utf32char ice_LongString;
 typedef DDS_sequence_ice_utf32char ice_VeryLongString;
  ice_VeryLongString *ice_VeryLongString__alloc (void);
  ice_utf32char *ice_VeryLongString_allocbuf (DDS_unsigned_long len);
-
-/* Definition for sequence of DDS_octet */
-#ifndef _DDS_sequence_octet_defined
-#define _DDS_sequence_octet_defined
-typedef struct {
-    DDS_unsigned_long _maximum;
-    DDS_unsigned_long _length;
-    DDS_octet *_buffer;
-    DDS_boolean _release;
-} DDS_sequence_octet;
- DDS_sequence_octet *DDS_sequence_octet__alloc (void);
- DDS_octet *DDS_sequence_octet_allocbuf (DDS_unsigned_long len);
-#endif /* _DDS_sequence_octet_defined */
 
 typedef DDS_sequence_octet ice_ImageData;
  ice_ImageData *ice_ImageData__alloc (void);

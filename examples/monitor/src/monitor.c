@@ -43,15 +43,15 @@ int main(int argc, char *argv[]) {
     ddsx = Ice_DdsConnector__create(0, "", deviceCache, numericCache);
 
     /* -- Create two observers that listen for updates and deletes in the 'devices' scope */
-    onDeviceUpdate = cx_observer__create(deviceCache, CX_ON_DEFINE|CX_ON_UPDATE|CX_ON_SCOPE, NULL, 0, NULL, NULL);
+    onDeviceUpdate = cx_observer__create(deviceCache, CX_ON_DEFINE|CX_ON_UPDATE|CX_ON_SCOPE, NULL, NULL);
     CX_OBSERVER_SET_CALLBACK(onDeviceUpdate, on_device_update);
-    onDeviceDelete = cx_observer__create(deviceCache, CX_ON_DELETE|CX_ON_SCOPE, NULL, 0, NULL, NULL);
+    onDeviceDelete = cx_observer__create(deviceCache, CX_ON_DELETE|CX_ON_SCOPE, NULL, NULL);
     CX_OBSERVER_SET_CALLBACK(onDeviceDelete, on_device_delete);
 
     /* -- Create two observers that listen for updates and deletes in the 'numerics' scope */
-    onNumericUpdate = cx_observer__create(numericCache, CX_ON_DEFINE|CX_ON_UPDATE|CX_ON_SCOPE, NULL, 0, NULL, NULL);
+    onNumericUpdate = cx_observer__create(numericCache, CX_ON_DEFINE|CX_ON_UPDATE|CX_ON_SCOPE, NULL, NULL);
     CX_OBSERVER_SET_CALLBACK(onNumericUpdate, on_numeric_update);
-    onNumericDelete = cx_observer__create(numericCache, CX_ON_DELETE|CX_ON_SCOPE, NULL, 0, NULL, NULL);
+    onNumericDelete = cx_observer__create(numericCache, CX_ON_DELETE|CX_ON_SCOPE, NULL, NULL);
     CX_OBSERVER_SET_CALLBACK(onNumericDelete, on_numeric_delete);
 
     /* -- Keep program alive until the exitEvent object is updated */

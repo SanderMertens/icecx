@@ -1,0 +1,8 @@
+
+TARGET = :monitor
+    
+INCLUDE = ["../../Ice/include"]
+LIB = ["Ice"]
+LIBPATH = ["../../Ice/bin"]
+
+require "#{ENV['CORTEX_HOME']}/build/tool"

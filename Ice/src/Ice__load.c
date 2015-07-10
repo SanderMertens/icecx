@@ -1,8 +1,9 @@
-/** 
- * This file is generated. Only insert code in appropriate places
+/* Ice__load.c
+ *
+ * This file is generated. Only insert code in appropriate places.
  */
 
-#include "Ice__meta.h"
+#include "Ice.h"
 
 /* $header() */
 /* Insert user-includes here */

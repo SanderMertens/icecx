@@ -1,0 +1,5 @@
+COMPONENTS = [] << 
+    :Ice <<
+    :examples
+    
+require "#{ENV['CORTEX_HOME']}/build/forward"

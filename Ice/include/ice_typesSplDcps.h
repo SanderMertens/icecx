@@ -1,14 +1,13 @@
 #ifndef ICE_TYPESSPLTYPES_H
 #define ICE_TYPESSPLTYPES_H
 
+#include "ice_typesDcps.h"
+
 #include <c_base.h>
 #include <c_misc.h>
 #include <c_sync.h>
 #include <c_collection.h>
 #include <c_field.h>
-
-#include "ice_typesDcps.h"
-
 
 extern c_metaObject __ice_types_ice__load (c_base base);
 
@@ -30,9 +29,11 @@ typedef c_string _ice_UnitIdentifier;
 extern const char *ice_utf32char_metaDescriptor[];
 extern const c_ulong ice_utf32char_metaDescriptorArrLength;
 extern c_metaObject __ice_utf32char__load (c_base base);
+extern const char * __ice_utf32char__keys (void);
+extern const char * __ice_utf32char__name (void);
 struct _ice_utf32char ;
-extern  c_bool __ice_utf32char__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_utf32char__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_utf32char__copyIn(c_base base, void *from, void *to);
+extern  void __ice_utf32char__copyOut(void *_from, void *_to);
 struct _ice_utf32char {
     c_octet value[4];
 };
@@ -52,9 +53,11 @@ typedef c_sequence _ice_Values;
 extern const char *ice_Time_t_metaDescriptor[];
 extern const c_ulong ice_Time_t_metaDescriptorArrLength;
 extern c_metaObject __ice_Time_t__load (c_base base);
+extern const char * __ice_Time_t__keys (void);
+extern const char * __ice_Time_t__name (void);
 struct _ice_Time_t ;
-extern  c_bool __ice_Time_t__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_Time_t__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_Time_t__copyIn(c_base base, void *from, void *to);
+extern  void __ice_Time_t__copyOut(void *_from, void *_to);
 struct _ice_Time_t {
     c_long sec;
     c_long nanosec;
@@ -63,9 +66,11 @@ struct _ice_Time_t {
 extern const char *ice_HeartBeat_metaDescriptor[];
 extern const c_ulong ice_HeartBeat_metaDescriptorArrLength;
 extern c_metaObject __ice_HeartBeat__load (c_base base);
+extern const char * __ice_HeartBeat__keys (void);
+extern const char * __ice_HeartBeat__name (void);
 struct _ice_HeartBeat ;
-extern  c_bool __ice_HeartBeat__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_HeartBeat__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_HeartBeat__copyIn(c_base base, void *from, void *to);
+extern  void __ice_HeartBeat__copyOut(void *_from, void *_to);
 struct _ice_HeartBeat {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     c_string type;
@@ -74,9 +79,11 @@ struct _ice_HeartBeat {
 extern const char *ice_TimeSync_metaDescriptor[];
 extern const c_ulong ice_TimeSync_metaDescriptorArrLength;
 extern c_metaObject __ice_TimeSync__load (c_base base);
+extern const char * __ice_TimeSync__keys (void);
+extern const char * __ice_TimeSync__name (void);
 struct _ice_TimeSync ;
-extern  c_bool __ice_TimeSync__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_TimeSync__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_TimeSync__copyIn(c_base base, void *from, void *to);
+extern  void __ice_TimeSync__copyOut(void *_from, void *_to);
 struct _ice_TimeSync {
     _ice_UniqueDeviceIdentifier heartbeat_source;
     _ice_UniqueDeviceIdentifier heartbeat_recipient;
@@ -87,9 +94,11 @@ struct _ice_TimeSync {
 extern const char *ice_Image_metaDescriptor[];
 extern const c_ulong ice_Image_metaDescriptorArrLength;
 extern c_metaObject __ice_Image__load (c_base base);
+extern const char * __ice_Image__keys (void);
+extern const char * __ice_Image__name (void);
 struct _ice_Image ;
-extern  c_bool __ice_Image__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_Image__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_Image__copyIn(c_base base, void *from, void *to);
+extern  void __ice_Image__copyOut(void *_from, void *_to);
 struct _ice_Image {
     c_string content_type;
     _ice_ImageData image;
@@ -98,9 +107,11 @@ struct _ice_Image {
 extern const char *ice_DeviceIdentity_metaDescriptor[];
 extern const c_ulong ice_DeviceIdentity_metaDescriptorArrLength;
 extern c_metaObject __ice_DeviceIdentity__load (c_base base);
+extern const char * __ice_DeviceIdentity__keys (void);
+extern const char * __ice_DeviceIdentity__name (void);
 struct _ice_DeviceIdentity ;
-extern  c_bool __ice_DeviceIdentity__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_DeviceIdentity__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_DeviceIdentity__copyIn(c_base base, void *from, void *to);
+extern  void __ice_DeviceIdentity__copyOut(void *_from, void *_to);
 struct _ice_DeviceIdentity {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     _ice_LongString manufacturer;
@@ -130,9 +141,11 @@ enum _ice_ConnectionType {
 extern const char *ice_DeviceConnectivity_metaDescriptor[];
 extern const c_ulong ice_DeviceConnectivity_metaDescriptorArrLength;
 extern c_metaObject __ice_DeviceConnectivity__load (c_base base);
+extern const char * __ice_DeviceConnectivity__keys (void);
+extern const char * __ice_DeviceConnectivity__name (void);
 struct _ice_DeviceConnectivity ;
-extern  c_bool __ice_DeviceConnectivity__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_DeviceConnectivity__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_DeviceConnectivity__copyIn(c_base base, void *from, void *to);
+extern  void __ice_DeviceConnectivity__copyOut(void *_from, void *_to);
 struct _ice_DeviceConnectivity {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     enum _ice_ConnectionState state;
@@ -143,9 +156,11 @@ struct _ice_DeviceConnectivity {
 extern const char *ice_MDSConnectivity_metaDescriptor[];
 extern const c_ulong ice_MDSConnectivity_metaDescriptorArrLength;
 extern c_metaObject __ice_MDSConnectivity__load (c_base base);
+extern const char * __ice_MDSConnectivity__keys (void);
+extern const char * __ice_MDSConnectivity__name (void);
 struct _ice_MDSConnectivity ;
-extern  c_bool __ice_MDSConnectivity__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_MDSConnectivity__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_MDSConnectivity__copyIn(c_base base, void *from, void *to);
+extern  void __ice_MDSConnectivity__copyOut(void *_from, void *_to);
 struct _ice_MDSConnectivity {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     c_string partition;
@@ -154,9 +169,11 @@ struct _ice_MDSConnectivity {
 extern const char *ice_MDSConnectivityObjective_metaDescriptor[];
 extern const c_ulong ice_MDSConnectivityObjective_metaDescriptorArrLength;
 extern c_metaObject __ice_MDSConnectivityObjective__load (c_base base);
+extern const char * __ice_MDSConnectivityObjective__keys (void);
+extern const char * __ice_MDSConnectivityObjective__name (void);
 struct _ice_MDSConnectivityObjective ;
-extern  c_bool __ice_MDSConnectivityObjective__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_MDSConnectivityObjective__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_MDSConnectivityObjective__copyIn(c_base base, void *from, void *to);
+extern  void __ice_MDSConnectivityObjective__copyOut(void *_from, void *_to);
 struct _ice_MDSConnectivityObjective {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     c_string partition;
@@ -165,9 +182,11 @@ struct _ice_MDSConnectivityObjective {
 extern const char *ice_Numeric_metaDescriptor[];
 extern const c_ulong ice_Numeric_metaDescriptorArrLength;
 extern c_metaObject __ice_Numeric__load (c_base base);
+extern const char * __ice_Numeric__keys (void);
+extern const char * __ice_Numeric__name (void);
 struct _ice_Numeric ;
-extern  c_bool __ice_Numeric__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_Numeric__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_Numeric__copyIn(c_base base, void *from, void *to);
+extern  void __ice_Numeric__copyOut(void *_from, void *_to);
 struct _ice_Numeric {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     _ice_MetricIdentifier metric_id;
@@ -182,9 +201,11 @@ struct _ice_Numeric {
 extern const char *ice_SampleArray_metaDescriptor[];
 extern const c_ulong ice_SampleArray_metaDescriptorArrLength;
 extern c_metaObject __ice_SampleArray__load (c_base base);
+extern const char * __ice_SampleArray__keys (void);
+extern const char * __ice_SampleArray__name (void);
 struct _ice_SampleArray ;
-extern  c_bool __ice_SampleArray__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_SampleArray__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_SampleArray__copyIn(c_base base, void *from, void *to);
+extern  void __ice_SampleArray__copyOut(void *_from, void *_to);
 struct _ice_SampleArray {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     _ice_MetricIdentifier metric_id;
@@ -200,9 +221,11 @@ struct _ice_SampleArray {
 extern const char *ice_InfusionObjective_metaDescriptor[];
 extern const c_ulong ice_InfusionObjective_metaDescriptorArrLength;
 extern c_metaObject __ice_InfusionObjective__load (c_base base);
+extern const char * __ice_InfusionObjective__keys (void);
+extern const char * __ice_InfusionObjective__name (void);
 struct _ice_InfusionObjective ;
-extern  c_bool __ice_InfusionObjective__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_InfusionObjective__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_InfusionObjective__copyIn(c_base base, void *from, void *to);
+extern  void __ice_InfusionObjective__copyOut(void *_from, void *_to);
 struct _ice_InfusionObjective {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     _ice_LongString requestor;
@@ -212,9 +235,11 @@ struct _ice_InfusionObjective {
 extern const char *ice_InfusionStatus_metaDescriptor[];
 extern const c_ulong ice_InfusionStatus_metaDescriptorArrLength;
 extern c_metaObject __ice_InfusionStatus__load (c_base base);
+extern const char * __ice_InfusionStatus__keys (void);
+extern const char * __ice_InfusionStatus__name (void);
 struct _ice_InfusionStatus ;
-extern  c_bool __ice_InfusionStatus__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_InfusionStatus__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_InfusionStatus__copyIn(c_base base, void *from, void *to);
+extern  void __ice_InfusionStatus__copyOut(void *_from, void *_to);
 struct _ice_InfusionStatus {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     c_bool infusionActive;
@@ -242,9 +267,11 @@ enum _ice_AlarmPriority {
 extern const char *ice_AlarmLimit_metaDescriptor[];
 extern const c_ulong ice_AlarmLimit_metaDescriptorArrLength;
 extern c_metaObject __ice_AlarmLimit__load (c_base base);
+extern const char * __ice_AlarmLimit__keys (void);
+extern const char * __ice_AlarmLimit__name (void);
 struct _ice_AlarmLimit ;
-extern  c_bool __ice_AlarmLimit__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_AlarmLimit__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_AlarmLimit__copyIn(c_base base, void *from, void *to);
+extern  void __ice_AlarmLimit__copyOut(void *_from, void *_to);
 struct _ice_AlarmLimit {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     _ice_MetricIdentifier metric_id;
@@ -256,9 +283,11 @@ struct _ice_AlarmLimit {
 extern const char *ice_GlobalAlarmLimitObjective_metaDescriptor[];
 extern const c_ulong ice_GlobalAlarmLimitObjective_metaDescriptorArrLength;
 extern c_metaObject __ice_GlobalAlarmLimitObjective__load (c_base base);
+extern const char * __ice_GlobalAlarmLimitObjective__keys (void);
+extern const char * __ice_GlobalAlarmLimitObjective__name (void);
 struct _ice_GlobalAlarmLimitObjective ;
-extern  c_bool __ice_GlobalAlarmLimitObjective__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_GlobalAlarmLimitObjective__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_GlobalAlarmLimitObjective__copyIn(c_base base, void *from, void *to);
+extern  void __ice_GlobalAlarmLimitObjective__copyOut(void *_from, void *_to);
 struct _ice_GlobalAlarmLimitObjective {
     _ice_MetricIdentifier metric_id;
     enum _ice_LimitType limit_type;
@@ -269,9 +298,11 @@ struct _ice_GlobalAlarmLimitObjective {
 extern const char *ice_LocalAlarmLimitObjective_metaDescriptor[];
 extern const c_ulong ice_LocalAlarmLimitObjective_metaDescriptorArrLength;
 extern c_metaObject __ice_LocalAlarmLimitObjective__load (c_base base);
+extern const char * __ice_LocalAlarmLimitObjective__keys (void);
+extern const char * __ice_LocalAlarmLimitObjective__name (void);
 struct _ice_LocalAlarmLimitObjective ;
-extern  c_bool __ice_LocalAlarmLimitObjective__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_LocalAlarmLimitObjective__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_LocalAlarmLimitObjective__copyIn(c_base base, void *from, void *to);
+extern  void __ice_LocalAlarmLimitObjective__copyOut(void *_from, void *_to);
 struct _ice_LocalAlarmLimitObjective {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     _ice_MetricIdentifier metric_id;
@@ -283,9 +314,11 @@ struct _ice_LocalAlarmLimitObjective {
 extern const char *ice_DeviceAlertCondition_metaDescriptor[];
 extern const c_ulong ice_DeviceAlertCondition_metaDescriptorArrLength;
 extern c_metaObject __ice_DeviceAlertCondition__load (c_base base);
+extern const char * __ice_DeviceAlertCondition__keys (void);
+extern const char * __ice_DeviceAlertCondition__name (void);
 struct _ice_DeviceAlertCondition ;
-extern  c_bool __ice_DeviceAlertCondition__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_DeviceAlertCondition__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_DeviceAlertCondition__copyIn(c_base base, void *from, void *to);
+extern  void __ice_DeviceAlertCondition__copyOut(void *_from, void *_to);
 struct _ice_DeviceAlertCondition {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     c_string alert_state;
@@ -294,9 +327,11 @@ struct _ice_DeviceAlertCondition {
 extern const char *ice_Alert_metaDescriptor[];
 extern const c_ulong ice_Alert_metaDescriptorArrLength;
 extern c_metaObject __ice_Alert__load (c_base base);
+extern const char * __ice_Alert__keys (void);
+extern const char * __ice_Alert__name (void);
 struct _ice_Alert ;
-extern  c_bool __ice_Alert__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_Alert__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_Alert__copyIn(c_base base, void *from, void *to);
+extern  void __ice_Alert__copyOut(void *_from, void *_to);
 struct _ice_Alert {
     _ice_UniqueDeviceIdentifier unique_device_identifier;
     c_string identifier;
@@ -306,14 +341,15 @@ struct _ice_Alert {
 extern const char *ice_Patient_metaDescriptor[];
 extern const c_ulong ice_Patient_metaDescriptorArrLength;
 extern c_metaObject __ice_Patient__load (c_base base);
+extern const char * __ice_Patient__keys (void);
+extern const char * __ice_Patient__name (void);
 struct _ice_Patient ;
-extern  c_bool __ice_Patient__copyIn(c_base base, const void *from, void *to);
-extern  void __ice_Patient__copyOut(const void *_from, void *_to);
+extern  c_bool __ice_Patient__copyIn(c_base base, void *from, void *to);
+extern  void __ice_Patient__copyOut(void *_from, void *_to);
 struct _ice_Patient {
     c_string mrn;
     _ice_VeryLongString given_name;
     _ice_VeryLongString family_name;
 };
 
-#undef OS_API
 #endif

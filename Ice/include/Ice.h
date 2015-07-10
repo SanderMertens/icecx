@@ -1,5 +1,0 @@
-#include "Ice_DdsConnector.h"
-#include "Ice_Device.h"
-#include "Ice_Image.h"
-#include "Ice_Numeric.h"
-#include "Ice_Time.h"
