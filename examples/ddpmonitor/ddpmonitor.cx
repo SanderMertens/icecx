@@ -1,4 +1,4 @@
-void devices numerics exitEvent
+void devices, numerics, exitEvent
 
 // Connect to Ice DDS system
 Ice::DdsConnector ddsx: 0, "", devices, numerics
