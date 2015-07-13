@@ -1,0 +1,53 @@
+<head>
+  <title>ddpmonitor</title>
+</head>
+
+<body>
+  <h1>DDS/DDP monitor</h1>
+
+  <h2>Devices</h2>
+  <table border="1" cellpadding="3">
+  	<tr>
+  		<th>Identifier</th>
+  		<th>Model</th>
+  		<th>Serial number</th>
+  		<th>Build</th>
+  		<th>Operating system</th>
+  	</tr>
+  {{#each devices}}
+  	<tr>
+  		<td>{{meta.name}}</td>
+  		<td>{{value.model}}</td>
+  		<td>{{value.serial_number}}</td>
+  		<td>{{value.build}}</td>
+  		<td>{{value.operating_system}}</td>
+  	</tr>
+  {{/each}}
+  </table>
+
+  <h2>Numerics</h2>
+  <table border="1" cellpadding="3">
+  	<tr>
+  		<th>Identifier</th>
+  		<th>Metric id</th>
+  		<th>Vendor metric id</th>
+  		<th>Instance id</th>
+  		<th>Unit id</th>
+  		<th>Value</th>
+  		<th>Device time</th>
+  		<th>Presentation time</th>
+  	</tr>
+  {{#each numerics}}
+  	<tr>
+  		<td>{{meta.name}}</td>
+  		<td>{{value.metric_id}}</td>
+  		<td>{{value.vendor_metric_id}}</td>
+  		<td>{{value.instance_id}}</td>
+  		<td>{{value.unit_id}}</td>
+  		<td>{{value.value}}</td>
+  		<td>{{value.device_time.sec}}.{{value.device_time.nanosec}}</td>
+  		<td>{{value.presentation_time.sec}}.{{value.presentation_time.nanosec}}</td>
+  	</tr>
+  {{/each}}
+  </table>
+</body>

@@ -1,0 +1,9 @@
+void devices numerics exitEvent
+
+// Connect to Ice DDS system
+Ice::DdsConnector ddsx: 0, "", devices, numerics
+
+// Start DDP server
+web::DDPServer s: 8000
+
+wait exitEvent
