@@ -1,5 +1,5 @@
 
-TARGET = 'Ice'
+PACKAGE = 'Ice'
 
 INCLUDE = ["#{ENV['OSPL_HOME']}/include/dcps/C/SAC", "#{ENV['OSPL_HOME']}/include", "#{ENV['OSPL_HOME']}/include/sys"]
 LIBPATH = ["#{ENV['OSPL_HOME']}/lib"]
